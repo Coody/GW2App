@@ -15,6 +15,7 @@
 		139197BE200742FF00D2638C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 139197BC200742FF00D2638C /* LaunchScreen.storyboard */; };
 		139197C9200742FF00D2638C /* GW2AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197C8200742FF00D2638C /* GW2AppTests.m */; };
 		139197D4200742FF00D2638C /* GW2AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197D3200742FF00D2638C /* GW2AppUITests.m */; };
+		139197E320074C6300D2638C /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197E220074C6300D2638C /* HomePageViewController.m */; };
 		D843B5A878158FF53356EECA /* libPods-GW2App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D4443D083CB25AC04211F0 /* libPods-GW2App.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 		139197CF200742FF00D2638C /* GW2AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		139197D3200742FF00D2638C /* GW2AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2AppUITests.m; sourceTree = "<group>"; };
 		139197D5200742FF00D2638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		139197E120074C6300D2638C /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		139197E220074C6300D2638C /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.release.xcconfig"; sourceTree = "<group>"; };
 		80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.debug.xcconfig"; sourceTree = "<group>"; };
 		D5D4443D083CB25AC04211F0 /* libPods-GW2App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GW2App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +120,8 @@
 				139197BC200742FF00D2638C /* LaunchScreen.storyboard */,
 				139197BF200742FF00D2638C /* Info.plist */,
 				139197AE200742FF00D2638C /* Supporting Files */,
+				139197E120074C6300D2638C /* HomePageViewController.h */,
+				139197E220074C6300D2638C /* HomePageViewController.m */,
 			);
 			path = GW2App;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139197E320074C6300D2638C /* HomePageViewController.m in Sources */,
 				139197B6200742FF00D2638C /* ViewController.m in Sources */,
 				139197B3200742FF00D2638C /* AppDelegate.m in Sources */,
 				139197B0200742FF00D2638C /* main.m in Sources */,
@@ -584,6 +590,7 @@
 				139197DA200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		139197DB200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2AppTests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +599,7 @@
 				139197DD200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		139197DE200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +608,7 @@
 				139197E0200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
