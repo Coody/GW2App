@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		139197B0200742FF00D2638C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197AF200742FF00D2638C /* main.m */; };
+		139197B9200742FF00D2638C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 139197B7200742FF00D2638C /* Main.storyboard */; };
+		139197BB200742FF00D2638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139197BA200742FF00D2638C /* Assets.xcassets */; };
+		139197BE200742FF00D2638C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 139197BC200742FF00D2638C /* LaunchScreen.storyboard */; };
+		139197C9200742FF00D2638C /* GW2AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197C8200742FF00D2638C /* GW2AppTests.m */; };
+		139197D4200742FF00D2638C /* GW2AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197D3200742FF00D2638C /* GW2AppUITests.m */; };
+		5AEA64EA20085DBF00758098 /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = 5AEA64E920085DBF00758098 /* Datas */; };
+		5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */; };
+		5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64F220085DD600758098 /* GW2BroH_Tools.m */; };
+		5AEA64F920085E1B00758098 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64F820085E1B00758098 /* AppDelegate.m */; };
+		5AEA650020085EC300758098 /* WebApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64FC20085EC300758098 /* WebApiRequest.m */; };
+		5AEA650120085EC300758098 /* WebsiteBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64FE20085EC300758098 /* WebsiteBase.m */; };
+		D843B5A878158FF53356EECA /* libPods-GW2App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D4443D083CB25AC04211F0 /* libPods-GW2App.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		139197C5200742FF00D2638C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139197A3200742FF00D2638C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 139197AA200742FF00D2638C;
+			remoteInfo = GW2App;
+		};
+		139197D0200742FF00D2638C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139197A3200742FF00D2638C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 139197AA200742FF00D2638C;
+			remoteInfo = GW2App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		139197AB200742FF00D2638C /* GW2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		139197AF200742FF00D2638C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		139197B8200742FF00D2638C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		139197BA200742FF00D2638C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		139197BD200742FF00D2638C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		139197BF200742FF00D2638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		139197C4200742FF00D2638C /* GW2AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		139197C8200742FF00D2638C /* GW2AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2AppTests.m; sourceTree = "<group>"; };
+		139197CA200742FF00D2638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		139197CF200742FF00D2638C /* GW2AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		139197D3200742FF00D2638C /* GW2AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2AppUITests.m; sourceTree = "<group>"; };
+		139197D5200742FF00D2638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.release.xcconfig"; sourceTree = "<group>"; };
+		5AEA64E920085DBF00758098 /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Datas; sourceTree = "<group>"; };
+		5AEA64EC20085DD600758098 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTabBar.h; sourceTree = "<group>"; };
+		5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTabBar.m; sourceTree = "<group>"; };
+		5AEA64F020085DD600758098 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5AEA64F120085DD600758098 /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
+		5AEA64F220085DD600758098 /* GW2BroH_Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2BroH_Tools.m; sourceTree = "<group>"; };
+		5AEA64F720085E1B00758098 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5AEA64F820085E1B00758098 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5AEA64FB20085EC300758098 /* WebApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebApiRequest.h; sourceTree = "<group>"; };
+		5AEA64FC20085EC300758098 /* WebApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebApiRequest.m; sourceTree = "<group>"; };
+		5AEA64FD20085EC300758098 /* WebsiteBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteBase.h; sourceTree = "<group>"; };
+		5AEA64FE20085EC300758098 /* WebsiteBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteBase.m; sourceTree = "<group>"; };
+		5AEA64FF20085EC300758098 /* WebsiteBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteBaseDefine.h; sourceTree = "<group>"; };
+		80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.debug.xcconfig"; sourceTree = "<group>"; };
+		D5D4443D083CB25AC04211F0 /* libPods-GW2App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GW2App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		139197A8200742FF00D2638C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D843B5A878158FF53356EECA /* libPods-GW2App.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		139197C1200742FF00D2638C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		139197CC200742FF00D2638C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		139197A2200742FF00D2638C = {
+			isa = PBXGroup;
+			children = (
+				139197AD200742FF00D2638C /* GW2App */,
+				139197C7200742FF00D2638C /* GW2AppTests */,
+				139197D2200742FF00D2638C /* GW2AppUITests */,
+				139197AC200742FF00D2638C /* Products */,
+				B6618B3F3C33E67F9DCEBC36 /* Pods */,
+				80712D064DF932137366E0F8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		139197AC200742FF00D2638C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139197AB200742FF00D2638C /* GW2App.app */,
+				139197C4200742FF00D2638C /* GW2AppTests.xctest */,
+				139197CF200742FF00D2638C /* GW2AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		139197AD200742FF00D2638C /* GW2App */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64E920085DBF00758098 /* Datas */,
+				5AEA64F620085E1B00758098 /* AppDelegate */,
+				5AEA64F320085DD700758098 /* Submodule */,
+				5AEA64EE20085DD600758098 /* ThirdParty */,
+				5AEA64EF20085DD600758098 /* Tools */,
+				5AEA64EB20085DD600758098 /* ViewController */,
+				139197B7200742FF00D2638C /* Main.storyboard */,
+				139197BA200742FF00D2638C /* Assets.xcassets */,
+				139197BC200742FF00D2638C /* LaunchScreen.storyboard */,
+				139197BF200742FF00D2638C /* Info.plist */,
+				139197AE200742FF00D2638C /* Supporting Files */,
+			);
+			path = GW2App;
+			sourceTree = "<group>";
+		};
+		139197AE200742FF00D2638C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				139197AF200742FF00D2638C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		139197C7200742FF00D2638C /* GW2AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				139197C8200742FF00D2638C /* GW2AppTests.m */,
+				139197CA200742FF00D2638C /* Info.plist */,
+			);
+			path = GW2AppTests;
+			sourceTree = "<group>";
+		};
+		139197D2200742FF00D2638C /* GW2AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				139197D3200742FF00D2638C /* GW2AppUITests.m */,
+				139197D5200742FF00D2638C /* Info.plist */,
+			);
+			path = GW2AppUITests;
+			sourceTree = "<group>";
+		};
+		5AEA64EB20085DD600758098 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64EC20085DD600758098 /* ViewControllerTabBar.h */,
+				5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5AEA64EE20085DD600758098 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		5AEA64EF20085DD600758098 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64F020085DD600758098 /* Constants.h */,
+				5AEA64F120085DD600758098 /* GW2BroH_Tools.h */,
+				5AEA64F220085DD600758098 /* GW2BroH_Tools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5AEA64F320085DD700758098 /* Submodule */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64FA20085EC300758098 /* Base */,
+			);
+			path = Submodule;
+			sourceTree = "<group>";
+		};
+		5AEA64F620085E1B00758098 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64F720085E1B00758098 /* AppDelegate.h */,
+				5AEA64F820085E1B00758098 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5AEA64FA20085EC300758098 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64FF20085EC300758098 /* WebsiteBaseDefine.h */,
+				5AEA64FD20085EC300758098 /* WebsiteBase.h */,
+				5AEA64FE20085EC300758098 /* WebsiteBase.m */,
+				5AEA64FB20085EC300758098 /* WebApiRequest.h */,
+				5AEA64FC20085EC300758098 /* WebApiRequest.m */,
+			);
+			name = Base;
+			path = Website/Website/Base;
+			sourceTree = "<group>";
+		};
+		80712D064DF932137366E0F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5D4443D083CB25AC04211F0 /* libPods-GW2App.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6618B3F3C33E67F9DCEBC36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */,
+				54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		139197AA200742FF00D2638C /* GW2App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 139197D8200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2App" */;
+			buildPhases = (
+				858C926F85444ABCCC116E4E /* [CP] Check Pods Manifest.lock */,
+				139197A7200742FF00D2638C /* Sources */,
+				139197A8200742FF00D2638C /* Frameworks */,
+				139197A9200742FF00D2638C /* Resources */,
+				10B60D99E628D357A4895EFC /* [CP] Embed Pods Frameworks */,
+				9E19AEA6099FFCCD0EB84096 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GW2App;
+			productName = GW2App;
+			productReference = 139197AB200742FF00D2638C /* GW2App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		139197C3200742FF00D2638C /* GW2AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 139197DB200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2AppTests" */;
+			buildPhases = (
+				139197C0200742FF00D2638C /* Sources */,
+				139197C1200742FF00D2638C /* Frameworks */,
+				139197C2200742FF00D2638C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				139197C6200742FF00D2638C /* PBXTargetDependency */,
+			);
+			name = GW2AppTests;
+			productName = GW2AppTests;
+			productReference = 139197C4200742FF00D2638C /* GW2AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		139197CE200742FF00D2638C /* GW2AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 139197DE200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2AppUITests" */;
+			buildPhases = (
+				139197CB200742FF00D2638C /* Sources */,
+				139197CC200742FF00D2638C /* Frameworks */,
+				139197CD200742FF00D2638C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				139197D1200742FF00D2638C /* PBXTargetDependency */,
+			);
+			name = GW2AppUITests;
+			productName = GW2AppUITests;
+			productReference = 139197CF200742FF00D2638C /* GW2AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		139197A3200742FF00D2638C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = min_liu;
+				TargetAttributes = {
+					139197AA200742FF00D2638C = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Manual;
+					};
+					139197C3200742FF00D2638C = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 139197AA200742FF00D2638C;
+					};
+					139197CE200742FF00D2638C = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 139197AA200742FF00D2638C;
+					};
+				};
+			};
+			buildConfigurationList = 139197A6200742FF00D2638C /* Build configuration list for PBXProject "GW2App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 139197A2200742FF00D2638C;
+			productRefGroup = 139197AC200742FF00D2638C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				139197AA200742FF00D2638C /* GW2App */,
+				139197C3200742FF00D2638C /* GW2AppTests */,
+				139197CE200742FF00D2638C /* GW2AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		139197A9200742FF00D2638C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				139197BE200742FF00D2638C /* LaunchScreen.storyboard in Resources */,
+				139197BB200742FF00D2638C /* Assets.xcassets in Resources */,
+				5AEA64EA20085DBF00758098 /* Datas in Resources */,
+				139197B9200742FF00D2638C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		139197C2200742FF00D2638C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		139197CD200742FF00D2638C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10B60D99E628D357A4895EFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GW2App/Pods-GW2App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		858C926F85444ABCCC116E4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GW2App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E19AEA6099FFCCD0EB84096 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GW2App/Pods-GW2App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		139197A7200742FF00D2638C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEA650020085EC300758098 /* WebApiRequest.m in Sources */,
+				5AEA64F920085E1B00758098 /* AppDelegate.m in Sources */,
+				5AEA650120085EC300758098 /* WebsiteBase.m in Sources */,
+				5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */,
+				5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */,
+				139197B0200742FF00D2638C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		139197C0200742FF00D2638C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				139197C9200742FF00D2638C /* GW2AppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		139197CB200742FF00D2638C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				139197D4200742FF00D2638C /* GW2AppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		139197C6200742FF00D2638C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 139197AA200742FF00D2638C /* GW2App */;
+			targetProxy = 139197C5200742FF00D2638C /* PBXContainerItemProxy */;
+		};
+		139197D1200742FF00D2638C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 139197AA200742FF00D2638C /* GW2App */;
+			targetProxy = 139197D0200742FF00D2638C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		139197B7200742FF00D2638C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				139197B8200742FF00D2638C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		139197BC200742FF00D2638C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				139197BD200742FF00D2638C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		139197D6200742FF00D2638C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		139197D7200742FF00D2638C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		139197D9200742FF00D2638C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = GW2App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2App;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		139197DA200742FF00D2638C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = GW2App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2App;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		139197DC200742FF00D2638C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GW2AppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2AppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GW2App.app/GW2App";
+			};
+			name = Debug;
+		};
+		139197DD200742FF00D2638C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GW2AppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2AppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GW2App.app/GW2App";
+			};
+			name = Release;
+		};
+		139197DF200742FF00D2638C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GW2AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2AppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GW2App;
+			};
+			name = Debug;
+		};
+		139197E0200742FF00D2638C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GW2AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2AppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GW2App;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		139197A6200742FF00D2638C /* Build configuration list for PBXProject "GW2App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				139197D6200742FF00D2638C /* Debug */,
+				139197D7200742FF00D2638C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		139197D8200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				139197D9200742FF00D2638C /* Debug */,
+				139197DA200742FF00D2638C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		139197DB200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				139197DC200742FF00D2638C /* Debug */,
+				139197DD200742FF00D2638C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		139197DE200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				139197DF200742FF00D2638C /* Debug */,
+				139197E0200742FF00D2638C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 139197A3200742FF00D2638C /* Project object */;
+}
