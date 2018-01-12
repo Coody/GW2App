@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		139197B0200742FF00D2638C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197AF200742FF00D2638C /* main.m */; };
-		139197B3200742FF00D2638C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197B2200742FF00D2638C /* AppDelegate.m */; };
-		139197B6200742FF00D2638C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197B5200742FF00D2638C /* ViewController.m */; };
 		139197B9200742FF00D2638C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 139197B7200742FF00D2638C /* Main.storyboard */; };
 		139197BB200742FF00D2638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139197BA200742FF00D2638C /* Assets.xcassets */; };
 		139197BE200742FF00D2638C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 139197BC200742FF00D2638C /* LaunchScreen.storyboard */; };
 		139197C9200742FF00D2638C /* GW2AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197C8200742FF00D2638C /* GW2AppTests.m */; };
 		139197D4200742FF00D2638C /* GW2AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197D3200742FF00D2638C /* GW2AppUITests.m */; };
+		5AEA64EA20085DBF00758098 /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = 5AEA64E920085DBF00758098 /* Datas */; };
+		5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */; };
+		5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64F220085DD600758098 /* GW2BroH_Tools.m */; };
+		5AEA64F920085E1B00758098 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64F820085E1B00758098 /* AppDelegate.m */; };
+		5AEA650020085EC300758098 /* WebApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64FC20085EC300758098 /* WebApiRequest.m */; };
+		5AEA650120085EC300758098 /* WebsiteBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64FE20085EC300758098 /* WebsiteBase.m */; };
 		D843B5A878158FF53356EECA /* libPods-GW2App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D4443D083CB25AC04211F0 /* libPods-GW2App.a */; };
 /* End PBXBuildFile section */
 
@@ -38,10 +42,6 @@
 /* Begin PBXFileReference section */
 		139197AB200742FF00D2638C /* GW2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139197AF200742FF00D2638C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		139197B1200742FF00D2638C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		139197B2200742FF00D2638C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		139197B4200742FF00D2638C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		139197B5200742FF00D2638C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		139197B8200742FF00D2638C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		139197BA200742FF00D2638C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		139197BD200742FF00D2638C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +53,19 @@
 		139197D3200742FF00D2638C /* GW2AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2AppUITests.m; sourceTree = "<group>"; };
 		139197D5200742FF00D2638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.release.xcconfig"; sourceTree = "<group>"; };
+		5AEA64E920085DBF00758098 /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Datas; sourceTree = "<group>"; };
+		5AEA64EC20085DD600758098 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTabBar.h; sourceTree = "<group>"; };
+		5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTabBar.m; sourceTree = "<group>"; };
+		5AEA64F020085DD600758098 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5AEA64F120085DD600758098 /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
+		5AEA64F220085DD600758098 /* GW2BroH_Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2BroH_Tools.m; sourceTree = "<group>"; };
+		5AEA64F720085E1B00758098 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5AEA64F820085E1B00758098 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5AEA64FB20085EC300758098 /* WebApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebApiRequest.h; sourceTree = "<group>"; };
+		5AEA64FC20085EC300758098 /* WebApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebApiRequest.m; sourceTree = "<group>"; };
+		5AEA64FD20085EC300758098 /* WebsiteBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteBase.h; sourceTree = "<group>"; };
+		5AEA64FE20085EC300758098 /* WebsiteBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteBase.m; sourceTree = "<group>"; };
+		5AEA64FF20085EC300758098 /* WebsiteBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteBaseDefine.h; sourceTree = "<group>"; };
 		80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.debug.xcconfig"; sourceTree = "<group>"; };
 		D5D4443D083CB25AC04211F0 /* libPods-GW2App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GW2App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,10 +121,12 @@
 		139197AD200742FF00D2638C /* GW2App */ = {
 			isa = PBXGroup;
 			children = (
-				139197B1200742FF00D2638C /* AppDelegate.h */,
-				139197B2200742FF00D2638C /* AppDelegate.m */,
-				139197B4200742FF00D2638C /* ViewController.h */,
-				139197B5200742FF00D2638C /* ViewController.m */,
+				5AEA64E920085DBF00758098 /* Datas */,
+				5AEA64F620085E1B00758098 /* AppDelegate */,
+				5AEA64F320085DD700758098 /* Submodule */,
+				5AEA64EE20085DD600758098 /* ThirdParty */,
+				5AEA64EF20085DD600758098 /* Tools */,
+				5AEA64EB20085DD600758098 /* ViewController */,
 				139197B7200742FF00D2638C /* Main.storyboard */,
 				139197BA200742FF00D2638C /* Assets.xcassets */,
 				139197BC200742FF00D2638C /* LaunchScreen.storyboard */,
@@ -145,6 +160,62 @@
 				139197D5200742FF00D2638C /* Info.plist */,
 			);
 			path = GW2AppUITests;
+			sourceTree = "<group>";
+		};
+		5AEA64EB20085DD600758098 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64EC20085DD600758098 /* ViewControllerTabBar.h */,
+				5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5AEA64EE20085DD600758098 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		5AEA64EF20085DD600758098 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64F020085DD600758098 /* Constants.h */,
+				5AEA64F120085DD600758098 /* GW2BroH_Tools.h */,
+				5AEA64F220085DD600758098 /* GW2BroH_Tools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5AEA64F320085DD700758098 /* Submodule */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64FA20085EC300758098 /* Base */,
+			);
+			path = Submodule;
+			sourceTree = "<group>";
+		};
+		5AEA64F620085E1B00758098 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64F720085E1B00758098 /* AppDelegate.h */,
+				5AEA64F820085E1B00758098 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5AEA64FA20085EC300758098 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA64FF20085EC300758098 /* WebsiteBaseDefine.h */,
+				5AEA64FD20085EC300758098 /* WebsiteBase.h */,
+				5AEA64FE20085EC300758098 /* WebsiteBase.m */,
+				5AEA64FB20085EC300758098 /* WebApiRequest.h */,
+				5AEA64FC20085EC300758098 /* WebApiRequest.m */,
+			);
+			name = Base;
+			path = Website/Website/Base;
 			sourceTree = "<group>";
 		};
 		80712D064DF932137366E0F8 /* Frameworks */ = {
@@ -234,7 +305,7 @@
 				TargetAttributes = {
 					139197AA200742FF00D2638C = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					139197C3200742FF00D2638C = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -275,6 +346,7 @@
 			files = (
 				139197BE200742FF00D2638C /* LaunchScreen.storyboard in Resources */,
 				139197BB200742FF00D2638C /* Assets.xcassets in Resources */,
+				5AEA64EA20085DBF00758098 /* Datas in Resources */,
 				139197B9200742FF00D2638C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,13 +389,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GW2App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E19AEA6099FFCCD0EB84096 /* [CP] Copy Pods Resources */ = {
@@ -348,8 +423,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				139197B6200742FF00D2638C /* ViewController.m in Sources */,
-				139197B3200742FF00D2638C /* AppDelegate.m in Sources */,
+				5AEA650020085EC300758098 /* WebApiRequest.m in Sources */,
+				5AEA64F920085E1B00758098 /* AppDelegate.m in Sources */,
+				5AEA650120085EC300758098 /* WebsiteBase.m in Sources */,
+				5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */,
+				5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */,
 				139197B0200742FF00D2638C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,10 +578,13 @@
 			baseConfigurationReference = 80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GW2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -512,10 +593,13 @@
 			baseConfigurationReference = 54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GW2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -584,6 +668,7 @@
 				139197DA200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		139197DB200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2AppTests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +677,7 @@
 				139197DD200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		139197DE200742FF00D2638C /* Build configuration list for PBXNativeTarget "GW2AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +686,7 @@
 				139197E0200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

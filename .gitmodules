@@ -1,0 +1,3 @@
+[submodule "GW2App/GW2App/Submodule/Website"]
+	path = GW2App/GW2App/Submodule/Website
+	url = https://github.com/Coody/Website.git
