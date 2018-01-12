@@ -12,7 +12,7 @@
 // for constants
 #import "Constants.h"
 
-@interface ViewControllerTabBar ()
+@interface ViewControllerTabBar () <UITabBarControllerDelegate>
 
 @end
 
