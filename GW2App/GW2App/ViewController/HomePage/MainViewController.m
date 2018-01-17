@@ -5,7 +5,7 @@
 //  Created by min_liu on 2018/1/12.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
-
+#import "Constants.h"
 #import "MainViewController.h"
 #import "TabBar_1ViewController.h"
 #import "LoginViewController.h"
@@ -14,14 +14,12 @@
 #import "ViewControllerTabBar.h"
 #import "ViewControllerNavigationController.h"
 
-
 @interface MainViewController ()
-@property (nonatomic, strong) TabBar_1ViewController *TabBar_1VC;
 
 @end
 
 @implementation MainViewController
-@synthesize TabBar_1VC;
+
 
 -(instancetype)init{
     self = [super init];
@@ -32,27 +30,16 @@
 }
 
 
-
 -(void) pushStart{
 
-    [(ViewControllerTabBar *)self.tabBarController changeViewControllerWithIndex:TAB_BAR_CONTROLLER_GAIN];
-
+    [(ViewControllerTabBar *)self.tabBarController changeViewControllerWithIndex:EnumTabBarIndexWorldBoss];
 }
 
 
 -(void) pushLoing{
     
-    ViewControllerNavigationController *NavCol = [[ViewControllerNavigationController alloc] init];
-    
-    [NavCol setNavigationBarHidden:NO animated:YES];
-    
     LoginViewController *vc = [[LoginViewController alloc]init];
-    //有前後頁關係顯示
-    //[NavCol pushViewController:vc animated:YES];
-    [self.navigationController pushViewController:vc animated:NO];
-    //換新畫面
-    //[self presentViewController:sc animated:1 completion:nil];
-    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)viewDidLoad {

@@ -1,32 +1,29 @@
 //
-//  TabBar_2ViewController.m
+//  VC_5NavigationController.m
 //  GW2App
 //
-//  Created by min_liu on 2018/1/12.
+//  Created by min_liu on 2018/1/16.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
+
+#import "VC_5NavigationController.h"
 #import "Constants.h"
-
-#import "TabBar_2ViewController.h"
-
-@interface TabBar_2ViewController ()
+@interface VC_5NavigationController ()
 
 @end
 
-@implementation TabBar_2ViewController
+@implementation VC_5NavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
     self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
-
-    self.title = @"page22";
     /* 顯示label */
     UILabel *myLabel = [[UILabel alloc] init];
     CGRect labelFrame = CGRectMake(120.0f, 25.0f, 180.0f, 23.0f);
     myLabel  = [[UILabel alloc]initWithFrame:labelFrame];
-    myLabel.text = @"page2";
+    myLabel.text = @"page5";
     myLabel.font = [UIFont boldSystemFontOfSize:14.0f];
     [self.view addSubview:myLabel];
 }

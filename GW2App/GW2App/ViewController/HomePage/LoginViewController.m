@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "MainViewController.h"
+#import "Constants.h"
 
 @interface LoginViewController ()
 
@@ -15,20 +16,33 @@
 
 @implementation LoginViewController
 
--(void) pushSurController{
-    MainViewController *svc = [[MainViewController alloc]init];
-    //有前後頁關係顯示
-    [self.navigationController pushViewController:svc animated:1];
+-(instancetype)init{
+    self = [super init];
+    if( self ){
+        [self.view setFrame:[UIScreen mainScreen].bounds];
+        
+        
+    }
+    return self;
+}
+
+
+-(void) popSurController{
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor greenColor]];
-    
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(pushSurController)];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(popSurController)];
     self.navigationItem.leftBarButtonItem = leftButton;
+    [self.view setBackgroundColor:[UIColor grayColor]];
     
+    self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
+    
+    //self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
+    self.title = @"Some Title";
 }
 
 - (void)didReceiveMemoryWarning {

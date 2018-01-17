@@ -10,7 +10,6 @@
 #import "MainViewController.h"
 
 @interface ViewControllerNavigationController () <UINavigationControllerDelegate>
-
 @end
 
 @implementation ViewControllerNavigationController
@@ -26,15 +25,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    [self setNavigationBarHidden:1 animated:NO];
+    [self setNavigationBarHidden:YES animated:NO];
+    MainViewController *vc = [[MainViewController alloc] init];
+    [self pushViewController:vc animated:YES];
 
 }
 
 //使用NavigationControllerDelegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-
+    
     if([viewController isMemberOfClass:[MainViewController class]])
     {
         [self setNavigationBarHidden:YES animated:NO];
