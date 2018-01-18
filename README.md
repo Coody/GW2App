@@ -1,5 +1,5 @@
 # GW2App
-Study iOS 框架
+新人教育訓練 - iOS 原生框架
 
 # 目標
 1. iOS App 基本框架。
@@ -8,6 +8,7 @@ Study iOS 框架
 4. 使用 Website 建立 Webapi 詢問資料。
 5. 使用 NotificationCenter , KVO , SQLite ...
 6. （額外加分項目）懂得閱讀官方文件、懂得去了解第三方 framework 的 api ...
+7. 幫助建立重構的思考模式。
 
 # Submodule & Framework
 
