@@ -7,12 +7,9 @@
 //
 #import "Constants.h"
 #import "MainViewController.h"
-#import "TabBar_1ViewController.h"
 #import "LoginViewController.h"
-
-#import "TabBar_1ViewController.h"
 #import "ViewControllerTabBar.h"
-#import "ViewControllerNavigationController.h"
+
 
 @interface MainViewController ()
 
@@ -32,6 +29,7 @@
 
 -(void) pushStart{
 
+    /* 呼叫TabBar陣列切換 */
     [(ViewControllerTabBar *)self.tabBarController changeViewControllerWithIndex:EnumTabBarIndexWorldBoss];
 }
 
@@ -44,8 +42,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor orangeColor]];
+    [self.view setBackgroundColor:VC_START_MENU_BACKGROUND_COLOR];
 
     /* StartButton */
     UIButton *newBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -66,7 +65,6 @@
     [LoginBtn setBackgroundColor:[UIColor whiteColor]];
     LoginBtn.tintColor = [UIColor blueColor];
     [self.view addSubview:LoginBtn];
-    
 
 }
 

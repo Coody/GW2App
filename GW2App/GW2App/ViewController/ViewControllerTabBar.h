@@ -6,6 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "Constants.h"
+
 enum{
     TAB_BAR_CONTROLLER_MAIN,
     TAB_BAR_CONTROLLER_GAIN,
@@ -15,6 +18,7 @@ enum{
 
 @interface ViewControllerTabBar : UITabBarController
 
--(void)changeViewControllerWithIndex:(NSUInteger)index;
+-(void)changeViewControllerWithIndex:(EnumTabBarIndex)index;
+-(int)getTabBarIndex;
 
 @end

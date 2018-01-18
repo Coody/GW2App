@@ -6,8 +6,9 @@
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
 #import "Constants.h"
-
+#import "GW2BroH_Tools.h"
 #import "TabBar_2ViewController.h"
+#import "ViewControllerTabBar.h"
 
 @interface TabBar_2ViewController ()
 
@@ -19,9 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
-    self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
-
-    self.title = @"page22";
+    //self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
+    
+    self.title = @"拍賣場";
+    
     /* 顯示label */
     UILabel *myLabel = [[UILabel alloc] init];
     CGRect labelFrame = CGRectMake(120.0f, 25.0f, 180.0f, 23.0f);
@@ -29,11 +31,26 @@
     myLabel.text = @"page2";
     myLabel.font = [UIFont boldSystemFontOfSize:14.0f];
     [self.view addSubview:myLabel];
+    
+    UIImage *test = [GW2BroH_Tools getImageWithString:@"ViewControllerGuild" withImageName:@"bounty"];
+    UIImageView *imageview = [[UIImageView alloc] initWithImage:test];
+    imageview.center = CGPointMake(150, 300);
+    [self.view addSubview:imageview];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
+    button.center = self.view.center;
+    [button setTitle:@"test" forState:(UIControlStateNormal)];
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(pressedBtn:) forControlEvents:(UIControlEventTouchUpInside)];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)pressedBtn:(id)sender{
+    [(ViewControllerTabBar *)self.tabBarController changeViewControllerWithIndex:EnumTabBarIndexStartMenu];
 }
 
 /*

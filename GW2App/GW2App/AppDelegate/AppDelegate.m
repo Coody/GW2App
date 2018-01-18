@@ -16,7 +16,10 @@
 
 @implementation AppDelegate
 
-
+/*
+ 1. Class 的名稱要改的更有辨識力
+ 2. 
+ */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

@@ -10,4 +10,14 @@
 
 @interface ViewControllerNavigationController : UINavigationController
 
+/**
+ * @brief 基礎的 NavigationController 控制元件
+ *
+ * @detail
+ *
+ * @param firstViewController : 塞入第一個畫面（必須繼承 UIViewController ）的實體
+ */
+-(instancetype)initWithFirstViewcontroller:(UIViewController *)firstViewController;
+
 @end
+

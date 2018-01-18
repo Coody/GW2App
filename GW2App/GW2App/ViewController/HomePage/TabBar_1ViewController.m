@@ -7,7 +7,7 @@
 //
 #import "Constants.h"
 #import "TabBar_1ViewController.h"
-#import "AppDelegate.h"
+#import "GW2BroH_Tools.h"
 
 @interface TabBar_1ViewController () <UITableViewDelegate ,UITableViewDataSource>
 @property (strong,nonatomic) UITableView *table;
@@ -32,6 +32,23 @@
     }
     
     cell.textLabel.text =  [_content objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:@"bounty"];
+    
+    
+    
+    UIImage *icon = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
+    CGSize itemSize = CGSizeMake(300, 400);//固定图片大小为36*36 icon.size;//
+    UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0.0);//*1
+    CGRect imageRect = CGRectMake(0, 0, itemSize.width, itemSize.height);
+    [icon drawInRect:imageRect];
+    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();//*2
+    UIGraphicsEndImageContext();
+    
+//    UIImage *test = [GW2BroH_Tools getImageWithString:@"ViewControllerGuild" withImageName:@"bounty"];
+//    UIImageView *imageview = [[UIImageView alloc] initWithImage:test];
+//    imageview.center = CGPointMake(150, 300);
+//    [self.view addSubview:imageview];
+
     return cell;
 }
 /* 每個區段多少資料 */
@@ -43,7 +60,7 @@
 /* 多少個區段資料 */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     //進三次
-    return 3;//1;
+    return 1;//1;
 }
 
 
@@ -51,9 +68,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
-    self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
+    //self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
+    //self.navigationItem.backBarButtonItem = VC_NAVIGATION_BAR_COLOR;
     
-    self.title = @"page11";
+    self.title = @"世界王";
     
     /* 顯示label */
     UILabel *myLabel2 = [[UILabel alloc] init];
@@ -74,18 +92,22 @@
 
     /* ViewCell */
     [self cofigureTableview];
-    //self.content = @[ @"Monday", @"Tuesday", @"Wednesday",@"Thursday",@"Friday",@"Saturday",@"Sunday"];
-    self.content = @[@"aaa", @"bbb"];
+    self.content = @[ @"Monday", @"Tuesday", @"Wednesday",@"Thursday",@"Friday",@"Saturday",@"Sunday"];
+    
+    
 }
 
 -(void)cofigureTableview
 {
-    //self.table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    self.table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    
+    //self.table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    //self.table = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, 250, 350) style:UITableViewStyleGrouped];
+    
+    self.table = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+    
     self.table.delegate = self;
     self.table.dataSource = self;
-    self.table.autoresizingMask = UIViewAutoresizingFlexibleWidth-10 | UIViewAutoresizingFlexibleHeight;
-    
+    //self.table.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.table];
 }
 

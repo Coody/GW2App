@@ -8,16 +8,21 @@
 
 #import "ViewControllerNavigationController.h"
 #import "MainViewController.h"
+#import "ViewControllerTabBar.h"
+
 
 @interface ViewControllerNavigationController () <UINavigationControllerDelegate>
+/* 實體 */
+@property (nonatomic , strong) UIViewController *vc;
 @end
 
 @implementation ViewControllerNavigationController
 
--(instancetype)init{
+-(instancetype)initWithFirstViewcontroller:(UIViewController *)firstViewController;{
     self = [super init];
     if( self ){
         self.delegate = self;
+        _vc = firstViewController;
     }
     return self;
 }
@@ -25,16 +30,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavigationBarHidden:YES animated:NO];
-    MainViewController *vc = [[MainViewController alloc] init];
-    [self pushViewController:vc animated:YES];
-
+    
+    /* 顯示出ViewController */
+    [self pushViewController:_vc animated:YES];
+    
 }
 
 //使用NavigationControllerDelegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    
+    /* 當時ViewControllr不是主畫面顯示NavigationBar */
     if([viewController isMemberOfClass:[MainViewController class]])
     {
         [self setNavigationBarHidden:YES animated:NO];
@@ -42,6 +47,8 @@
     else
     {
         [self setNavigationBarHidden:NO animated:YES];
+        
+        [(ViewControllerTabBar *)self.tabBarController getTabBarIndex];
     }
 }
 

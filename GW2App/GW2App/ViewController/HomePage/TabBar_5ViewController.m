@@ -1,35 +1,22 @@
 //
-//  LoginViewController.m
+//  TabBar_5ViewController.m
 //  GW2App
 //
-//  Created by min_liu on 2018/1/12.
+//  Created by min_liu on 2018/1/18.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
 
-#import "LoginViewController.h"
-#import "Constants.h"
+#import "TabBar_5ViewController.h"
 
-@interface LoginViewController ()
+@interface TabBar_5ViewController ()
 
 @end
 
-@implementation LoginViewController
-
--(void) popSurController{
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
+@implementation TabBar_5ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(popSurController)];
-    self.navigationItem.leftBarButtonItem = leftButton;
-    [self.view setBackgroundColor:[UIColor grayColor]];
-    
-    self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
-    
-    self.title = @"Login";
 }
 
 - (void)didReceiveMemoryWarning {
