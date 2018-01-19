@@ -1,66 +1,77 @@
 //
-//  TabBar_1ViewController.m
+//  WorldBossViewController.m
 //  GW2App
 //
-//  Created by min_liu on 2018/1/12.
+//  Created by min_liu on 2018/1/18.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
-#import "Constants.h"
-#import "TabBar_1ViewController.h"
-#import "GW2BroH_Tools.h"
 
-@interface TabBar_1ViewController () <UITableViewDelegate ,UITableViewDataSource>
+#import "WorldBossViewController.h"
+#import "Constants.h"
+#import "GW2BroH_Tools.h"
+#import "ViewControllerNavigationController.h"
+
+@interface WorldBossViewController () <UITableViewDelegate ,UITableViewDataSource>
 @property (strong,nonatomic) UITableView *table;
 @property (strong,nonatomic) NSArray     *content;
 
-
 @end
 
-@implementation TabBar_1ViewController
+@implementation WorldBossViewController
 /* TableViewDataSource */
 /* 將資料填入TabView */
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //進七次
     static NSString *cellIdentifier = @"cellIdentifier";
     UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:cellIdentifier];
     
     /* 給定識別儲存格不在,會以識別子建立儲存格 */
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+        //cell右側按鍵
+        cell.showsReorderControl = NO;
+        //cell右側圖示
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.contentMode = UIViewContentModeCenter;
+        
     }
+    cell.textLabel.backgroundColor = [UIColor orangeColor];
     
-    cell.textLabel.text =  [_content objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"bounty"];
-    
-    
-    
-    UIImage *icon = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
-    CGSize itemSize = CGSizeMake(300, 400);//固定图片大小为36*36 icon.size;//
-    UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0.0);//*1
-    CGRect imageRect = CGRectMake(0, 0, itemSize.width, itemSize.height);
+    /* 貼底圖 */
+    UIImage *icon;
+    if(indexPath.row)
+    {
+        icon = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
+    }
+    else
+    {
+        icon = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
+    }
+    CGSize itemSize = CGSizeMake(220, 900);
+    UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0.0);
+    CGRect imageRect = CGRectMake(0, 0, 220, 900);
     [icon drawInRect:imageRect];
-    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();//*2
+    //float ii = cell.contentView.frame.size.height;
+    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-//    UIImage *test = [GW2BroH_Tools getImageWithString:@"ViewControllerGuild" withImageName:@"bounty"];
-//    UIImageView *imageview = [[UIImageView alloc] initWithImage:test];
-//    imageview.center = CGPointMake(150, 300);
-//    [self.view addSubview:imageview];
-
+    cell.textLabel.text = [_content objectAtIndex:indexPath.row];
+    
+    
     return cell;
 }
 /* 每個區段多少資料 */
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //進三次
-    return self.content.count;
+    
+    return 4;//self.content.count;
 }
 /* 多少個區段資料 */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //進三次
-    return 1;//1;
+
+    return 1;
 }
 
 
@@ -81,20 +92,10 @@
     myLabel2.font = [UIFont boldSystemFontOfSize:14.0f];
     [self.view addSubview:myLabel2];
     
-//    UIButton *btn ;//= [[UIButton alloc] init];
-//    btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    btn.frame = CGRectMake(0, 0, 150, 70);
-//    btn.center = CGPointMake(160, 120);
-//    btn.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-//    [btn setTitle:@"Change to Fourth" forState:UIControlStateNormal];
-//    //[btn addTarget:self action:@selector(changToFourthTab) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:btn];
-
     /* ViewCell */
     [self cofigureTableview];
-    self.content = @[ @"Monday", @"Tuesday", @"Wednesday",@"Thursday",@"Friday",@"Saturday",@"Sunday"];
-    
-    
+    //self.content = @[ @"Monday", @"Tuesday", @"Wednesday",@"Thursday",@"Friday",@"Saturday",@"Sunday"];
+    self.content = @[ @"1", @"2", @"3",@"4"];
 }
 
 -(void)cofigureTableview
@@ -102,12 +103,29 @@
     
     //self.table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     //self.table = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, 250, 350) style:UITableViewStyleGrouped];
-    
     self.table = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+    
+    
+    self.table.backgroundColor = [UIColor orangeColor];
+    //self.table.separatorStyle = UITableViewCellSeparatorStyleNone;//無cell線條
     
     self.table.delegate = self;
     self.table.dataSource = self;
+    
+    CGRect frame = self.view.frame;
+    /* 取得NavigationBar高 */
+    ViewControllerNavigationController *navBar = [[ViewControllerNavigationController alloc] init];
+    frame.origin.y += navBar.toolbar.intrinsicContentSize.height;//50;
+    self.table.frame = frame;
+    
+    
+    /* 設定Cell高 */
+    UIImage *image = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
+    UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
+    self.table.rowHeight = imageview.frame.size.height;
+
     //self.table.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
     [self.view addSubview:self.table];
 }
 

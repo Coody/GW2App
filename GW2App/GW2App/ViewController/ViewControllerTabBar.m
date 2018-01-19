@@ -10,14 +10,15 @@
 
 // for ViewController
 #import "MainViewController.h"
-#import "TabBar_1ViewController.h"
-#import "TabBar_2ViewController.h"
-#import "TabBar_3ViewController.h"
-#import "TabBar_4ViewController.h"
-#import "TabBar_5ViewController.h"
-#import "LoginViewController.h"
-#import "ViewControllerNavigationController.h"
 
+#import "WorldBossViewController.h"
+#import "ItemsViewController.h"
+#import "DungeonsViewController.h"
+#import "GuildViewController.h"
+#import "MoreViewController.h"
+#import "LoginViewController.h"
+
+#import "ViewControllerNavigationController.h"
 // for constants
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
@@ -26,12 +27,6 @@
 {
     int indexShow;
 }
-
-//@property (nonatomic, strong) TabBar_1ViewController *vc1;
-//@property (nonatomic, strong) TabBar_2ViewController *vc2;
-//@property (nonatomic, strong) TabBar_2ViewController *vc3;
-//@property (nonatomic, strong) TabBar_2ViewController *vc4;
-//@property (nonatomic, strong) TabBar_2ViewController *vc5;
 
 @property (nonatomic , strong) NSArray *firstArray;
 @property (nonatomic , strong) NSArray *secondArray;
@@ -59,19 +54,19 @@
     
     /* Array2 */
     /* 將viewController做成實體 並使用Navigation控制*/
-    TabBar_1ViewController *ViewController1 = [[TabBar_1ViewController alloc] init];
+    WorldBossViewController *ViewController1 = [[WorldBossViewController alloc] init];
     ViewControllerNavigationController *vc1 = [[ViewControllerNavigationController alloc] initWithFirstViewcontroller:ViewController1];
     
-    TabBar_2ViewController *ViewController2 = [[TabBar_2ViewController alloc] init];
+    ItemsViewController *ViewController2 = [[ItemsViewController alloc] init];
     ViewControllerNavigationController *vc2 = [[ViewControllerNavigationController alloc] initWithFirstViewcontroller:ViewController2];
     
-    TabBar_3ViewController *ViewController3 = [[TabBar_3ViewController alloc] init];
+    DungeonsViewController *ViewController3 = [[DungeonsViewController alloc] init];
     ViewControllerNavigationController *vc3 = [[ViewControllerNavigationController alloc] initWithFirstViewcontroller:ViewController3];
     
-    TabBar_4ViewController *ViewController4 = [[TabBar_4ViewController alloc] init];
+    GuildViewController *ViewController4 = [[GuildViewController alloc] init];
     ViewControllerNavigationController *vc4 = [[ViewControllerNavigationController alloc] initWithFirstViewcontroller:ViewController4];
     
-    TabBar_5ViewController *ViewController5 = [[TabBar_5ViewController alloc] init];
+    MoreViewController *ViewController5 = [[MoreViewController alloc] init];
     ViewControllerNavigationController *vc5 = [[ViewControllerNavigationController alloc] initWithFirstViewcontroller:ViewController5];
 
     _secondArray = [[NSArray alloc]initWithObjects: vc1, vc2, vc3, vc4, vc5, nil];
@@ -88,6 +83,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+/* 切換TabBar切換ViewController*/
 -(void)changeViewControllerWithIndex:(EnumTabBarIndex)index{
     switch (index) {
         case EnumTabBarIndexWorldBoss:

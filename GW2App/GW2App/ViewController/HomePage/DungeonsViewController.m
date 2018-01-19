@@ -1,18 +1,18 @@
 //
-//  TabBar_5ViewController.m
+//  DungeonsViewController.m
 //  GW2App
 //
 //  Created by min_liu on 2018/1/18.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
 
-#import "TabBar_5ViewController.h"
+#import "DungeonsViewController.h"
 
-@interface TabBar_5ViewController ()
+@interface DungeonsViewController ()
 
 @end
 
-@implementation TabBar_5ViewController
+@implementation DungeonsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

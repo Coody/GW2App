@@ -1,20 +1,20 @@
 //
-//  TabBar_2ViewController.m
+//  ItemsViewController.m
 //  GW2App
 //
-//  Created by min_liu on 2018/1/12.
+//  Created by min_liu on 2018/1/18.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
-#import "TabBar_2ViewController.h"
+#import "ItemsViewController.h"
 #import "ViewControllerTabBar.h"
 
-@interface TabBar_2ViewController ()
+@interface ItemsViewController ()
 
 @end
 
-@implementation TabBar_2ViewController
+@implementation ItemsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,7 +52,6 @@
 -(void)pressedBtn:(id)sender{
     [(ViewControllerTabBar *)self.tabBarController changeViewControllerWithIndex:EnumTabBarIndexStartMenu];
 }
-
 /*
 #pragma mark - Navigation
 

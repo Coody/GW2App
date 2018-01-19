@@ -1,31 +1,22 @@
 //
-//  VC_4NavigationController.m
+//  MoreViewController.m
 //  GW2App
 //
-//  Created by min_liu on 2018/1/16.
+//  Created by min_liu on 2018/1/18.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
 
-#import "VC_4NavigationController.h"
-#import "Constants.h"
-@interface VC_4NavigationController ()
+#import "MoreViewController.h"
+
+@interface MoreViewController ()
 
 @end
 
-@implementation VC_4NavigationController
+@implementation MoreViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
-    self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
-    /* 顯示label */
-    UILabel *myLabel = [[UILabel alloc] init];
-    CGRect labelFrame = CGRectMake(120.0f, 25.0f, 180.0f, 23.0f);
-    myLabel  = [[UILabel alloc]initWithFrame:labelFrame];
-    myLabel.text = @"page4";
-    myLabel.font = [UIFont boldSystemFontOfSize:14.0f];
-    [self.view addSubview:myLabel];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,5 +1,5 @@
 //
-//  TabBar_4ViewController.h
+//  MoreViewController.h
 //  GW2App
 //
 //  Created by min_liu on 2018/1/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabBar_4ViewController : UIViewController
+@interface MoreViewController : UIViewController
 
 @end

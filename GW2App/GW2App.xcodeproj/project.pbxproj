@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132B64722010A9C000C3407E /* GuildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B64712010A9C000C3407E /* GuildViewController.m */; };
+		132B64752010A9CF00C3407E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B64742010A9CF00C3407E /* MoreViewController.m */; };
+		132B64782010A9E600C3407E /* DungeonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B64772010A9E500C3407E /* DungeonsViewController.m */; };
+		132B647B2010A9F900C3407E /* WorldBossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B647A2010A9F900C3407E /* WorldBossViewController.m */; };
+		132B647E2010AA1000C3407E /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B647D2010AA1000C3407E /* ItemsViewController.m */; };
 		139197B0200742FF00D2638C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197AF200742FF00D2638C /* main.m */; };
 		139197BB200742FF00D2638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139197BA200742FF00D2638C /* Assets.xcassets */; };
 		139197C9200742FF00D2638C /* GW2AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197C8200742FF00D2638C /* GW2AppTests.m */; };
 		139197D4200742FF00D2638C /* GW2AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197D3200742FF00D2638C /* GW2AppUITests.m */; };
 		13C53D0A2008AB6E0081EBD7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D092008AB6E0081EBD7 /* MainViewController.m */; };
-		13C53D0D2008B3920081EBD7 /* TabBar_1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D0C2008B3920081EBD7 /* TabBar_1ViewController.m */; };
-		13C53D102008B3AD0081EBD7 /* TabBar_2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D0F2008B3AD0081EBD7 /* TabBar_2ViewController.m */; };
 		13C53D132008B6E80081EBD7 /* ViewControllerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D122008B6E80081EBD7 /* ViewControllerNavigationController.m */; };
 		13C53D162008BBCD0081EBD7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D152008BBCD0081EBD7 /* LoginViewController.m */; };
-		13D2C43920106CBA008F23B5 /* TabBar_3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D2C43820106CBA008F23B5 /* TabBar_3ViewController.m */; };
-		13D2C43C20106CD9008F23B5 /* TabBar_4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D2C43B20106CD9008F23B5 /* TabBar_4ViewController.m */; };
-		13D2C43F20106CEC008F23B5 /* TabBar_5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D2C43E20106CEC008F23B5 /* TabBar_5ViewController.m */; };
 		5AEA64EA20085DBF00758098 /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = 5AEA64E920085DBF00758098 /* Datas */; };
 		5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */; };
 		5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64F220085DD600758098 /* GW2BroH_Tools.m */; };
@@ -46,6 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		132B64702010A9C000C3407E /* GuildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuildViewController.h; sourceTree = "<group>"; };
+		132B64712010A9C000C3407E /* GuildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuildViewController.m; sourceTree = "<group>"; };
+		132B64732010A9CF00C3407E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		132B64742010A9CF00C3407E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		132B64762010A9E500C3407E /* DungeonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DungeonsViewController.h; sourceTree = "<group>"; };
+		132B64772010A9E500C3407E /* DungeonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DungeonsViewController.m; sourceTree = "<group>"; };
+		132B64792010A9F900C3407E /* WorldBossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldBossViewController.h; sourceTree = "<group>"; };
+		132B647A2010A9F900C3407E /* WorldBossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldBossViewController.m; sourceTree = "<group>"; };
+		132B647C2010AA1000C3407E /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
+		132B647D2010AA1000C3407E /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
 		139197AB200742FF00D2638C /* GW2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139197AF200742FF00D2638C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		139197BA200742FF00D2638C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,20 +68,10 @@
 		139197D5200742FF00D2638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C53D082008AB6E0081EBD7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		13C53D092008AB6E0081EBD7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		13C53D0B2008B3920081EBD7 /* TabBar_1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar_1ViewController.h; sourceTree = "<group>"; };
-		13C53D0C2008B3920081EBD7 /* TabBar_1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar_1ViewController.m; sourceTree = "<group>"; };
-		13C53D0E2008B3AD0081EBD7 /* TabBar_2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar_2ViewController.h; sourceTree = "<group>"; };
-		13C53D0F2008B3AD0081EBD7 /* TabBar_2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar_2ViewController.m; sourceTree = "<group>"; };
 		13C53D112008B6E80081EBD7 /* ViewControllerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerNavigationController.h; sourceTree = "<group>"; };
 		13C53D122008B6E80081EBD7 /* ViewControllerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerNavigationController.m; sourceTree = "<group>"; };
 		13C53D142008BBCD0081EBD7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		13C53D152008BBCD0081EBD7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		13D2C43720106CBA008F23B5 /* TabBar_3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar_3ViewController.h; sourceTree = "<group>"; };
-		13D2C43820106CBA008F23B5 /* TabBar_3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar_3ViewController.m; sourceTree = "<group>"; };
-		13D2C43A20106CD9008F23B5 /* TabBar_4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar_4ViewController.h; sourceTree = "<group>"; };
-		13D2C43B20106CD9008F23B5 /* TabBar_4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar_4ViewController.m; sourceTree = "<group>"; };
-		13D2C43D20106CEC008F23B5 /* TabBar_5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar_5ViewController.h; sourceTree = "<group>"; };
-		13D2C43E20106CEC008F23B5 /* TabBar_5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar_5ViewController.m; sourceTree = "<group>"; };
 		54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.release.xcconfig"; sourceTree = "<group>"; };
 		5AEA64E920085DBF00758098 /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Datas; sourceTree = "<group>"; };
 		5AEA64EC20085DD600758098 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTabBar.h; sourceTree = "<group>"; };
@@ -185,20 +185,20 @@
 			children = (
 				13C53D082008AB6E0081EBD7 /* MainViewController.h */,
 				13C53D092008AB6E0081EBD7 /* MainViewController.m */,
-				13C53D0B2008B3920081EBD7 /* TabBar_1ViewController.h */,
-				13C53D0C2008B3920081EBD7 /* TabBar_1ViewController.m */,
-				13C53D0E2008B3AD0081EBD7 /* TabBar_2ViewController.h */,
-				13C53D0F2008B3AD0081EBD7 /* TabBar_2ViewController.m */,
-				13D2C43720106CBA008F23B5 /* TabBar_3ViewController.h */,
-				13D2C43820106CBA008F23B5 /* TabBar_3ViewController.m */,
-				13D2C43A20106CD9008F23B5 /* TabBar_4ViewController.h */,
-				13D2C43B20106CD9008F23B5 /* TabBar_4ViewController.m */,
-				13D2C43D20106CEC008F23B5 /* TabBar_5ViewController.h */,
-				13D2C43E20106CEC008F23B5 /* TabBar_5ViewController.m */,
 				13C53D112008B6E80081EBD7 /* ViewControllerNavigationController.h */,
 				13C53D122008B6E80081EBD7 /* ViewControllerNavigationController.m */,
 				13C53D142008BBCD0081EBD7 /* LoginViewController.h */,
 				13C53D152008BBCD0081EBD7 /* LoginViewController.m */,
+				132B64792010A9F900C3407E /* WorldBossViewController.h */,
+				132B647A2010A9F900C3407E /* WorldBossViewController.m */,
+				132B647C2010AA1000C3407E /* ItemsViewController.h */,
+				132B647D2010AA1000C3407E /* ItemsViewController.m */,
+				132B64762010A9E500C3407E /* DungeonsViewController.h */,
+				132B64772010A9E500C3407E /* DungeonsViewController.m */,
+				132B64702010A9C000C3407E /* GuildViewController.h */,
+				132B64712010A9C000C3407E /* GuildViewController.m */,
+				132B64732010A9CF00C3407E /* MoreViewController.h */,
+				132B64742010A9CF00C3407E /* MoreViewController.m */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -463,18 +463,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13D2C43F20106CEC008F23B5 /* TabBar_5ViewController.m in Sources */,
-				13D2C43920106CBA008F23B5 /* TabBar_3ViewController.m in Sources */,
 				5AEA650020085EC300758098 /* WebApiRequest.m in Sources */,
+				132B647E2010AA1000C3407E /* ItemsViewController.m in Sources */,
 				5AEA64F920085E1B00758098 /* AppDelegate.m in Sources */,
+				132B647B2010A9F900C3407E /* WorldBossViewController.m in Sources */,
 				13C53D132008B6E80081EBD7 /* ViewControllerNavigationController.m in Sources */,
 				5AEA650120085EC300758098 /* WebsiteBase.m in Sources */,
-				13D2C43C20106CD9008F23B5 /* TabBar_4ViewController.m in Sources */,
 				5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */,
 				13C53D0A2008AB6E0081EBD7 /* MainViewController.m in Sources */,
-				13C53D102008B3AD0081EBD7 /* TabBar_2ViewController.m in Sources */,
+				132B64752010A9CF00C3407E /* MoreViewController.m in Sources */,
 				5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */,
-				13C53D0D2008B3920081EBD7 /* TabBar_1ViewController.m in Sources */,
+				132B64722010A9C000C3407E /* GuildViewController.m in Sources */,
+				132B64782010A9E600C3407E /* DungeonsViewController.m in Sources */,
 				13C53D162008BBCD0081EBD7 /* LoginViewController.m in Sources */,
 				139197B0200742FF00D2638C /* main.m in Sources */,
 			);
