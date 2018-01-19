@@ -27,13 +27,6 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    /*
-    
-    MainViewController *vc = [[MainViewController alloc] init];
-    self.NavController = [[ViewControllerNavigationController alloc] initWithRootViewController:vc];
-    
-    */
-    
     //tabBar
     ViewControllerTabBar *tabBarContrller = [[ViewControllerTabBar alloc] init];
 

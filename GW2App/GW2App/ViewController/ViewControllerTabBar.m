@@ -24,9 +24,7 @@
 #import "GW2BroH_Tools.h"
 
 @interface ViewControllerTabBar ()
-{
-    int indexShow;
-}
+
 
 @property (nonatomic , strong) NSArray *firstArray;
 @property (nonatomic , strong) NSArray *secondArray;
@@ -48,7 +46,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    indexShow = 0;
+
     
     // Do any additional setup after loading the view from its nib.
     
@@ -74,6 +72,8 @@
     /* Array1 */
     MainViewController *mainVC = [[MainViewController alloc] init];
     _firstArray = [[NSArray alloc] initWithObjects:[[ViewControllerNavigationController alloc] initWithFirstViewcontroller:mainVC], nil];
+    
+    /* 開啟切到陣列1顯示主畫面 */
     [self.tabBar setHidden:YES];
     [self setViewControllers:_firstArray animated:YES];
 }
@@ -120,9 +120,4 @@
     
 }
 
-
--(int)getTabBarIndex{
-    
-    return indexShow;
-}
 @end

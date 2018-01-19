@@ -48,7 +48,6 @@
     {
         [self setNavigationBarHidden:NO animated:YES];
         
-        [(ViewControllerTabBar *)self.tabBarController getTabBarIndex];
     }
 }
 
