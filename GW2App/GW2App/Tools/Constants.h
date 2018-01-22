@@ -10,7 +10,7 @@
 #define GW2BroH_Constants_h
 
 #pragma mark - Enum
-typedef enum : NSInteger{
+typedef enum : int{
     EnumTabBarIndexStartMenu = 0,
     EnumTabBarIndexWorldBoss = 10,
     EnumTabBarIndexItems = 11,

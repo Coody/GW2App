@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  HomePageViewController.h
 //  GW2App
 //
 //  Created by min_liu on 2018/1/11.
@@ -8,15 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-
-
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-
+@interface HomePageViewController : UIViewController
 
 @end
-
