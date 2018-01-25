@@ -7,12 +7,22 @@
 //
 
 #import "MoreViewController.h"
-
+//TabBar icon
+#import "GW2BroH_Tools.h"
 @interface MoreViewController ()
 
 @end
 
 @implementation MoreViewController
+
+//-(instancetype)init{
+//    self = [super init];
+//    if( self ){
+//        UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag: 5];
+//        self.tabBarItem = item;
+//    }
+//    return self;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

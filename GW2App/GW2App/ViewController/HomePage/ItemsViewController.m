@@ -16,26 +16,25 @@
 
 @implementation ItemsViewController
 
+//-(instancetype)init{
+//    self = [super init];
+//    if( self ){
+//        UIImage *image = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"tp"];
+//        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"拍賣場" image:image selectedImage:image];
+//        item.tag = 2;
+//        self.tabBarItem = item;
+//    }
+//    return self;
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
     //self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
     
-    self.title = @"拍賣場";
-    
-    /* 顯示label */
-    UILabel *myLabel = [[UILabel alloc] init];
-    CGRect labelFrame = CGRectMake(120.0f, 25.0f, 180.0f, 23.0f);
-    myLabel  = [[UILabel alloc]initWithFrame:labelFrame];
-    myLabel.text = @"page2";
-    myLabel.font = [UIFont boldSystemFontOfSize:14.0f];
-    [self.view addSubview:myLabel];
-    
-    UIImage *test = [GW2BroH_Tools getImageWithString:@"ViewControllerGuild" withImageName:@"bounty"];
-    UIImageView *imageview = [[UIImageView alloc] initWithImage:test];
-    imageview.center = CGPointMake(150, 300);
-    [self.view addSubview:imageview];
+
+
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
     button.center = self.view.center;

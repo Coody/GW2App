@@ -37,7 +37,6 @@
 -(id)init{
     self = [super init];
     if ( self != nil ) {
-        //UIImage *test = [GW2BroH_Tools getImageWithString:@"/Datas/ViewControllerGuild" withImageName:@"bounty"];
         
     }
     return self;
@@ -46,12 +45,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.tabBar.tintColor = [UIColor whiteColor];
+    
     
     // Do any additional setup after loading the view from its nib.
     
     /* Array2 */
     /* 將viewController做成實體 並使用Navigation控制*/
+    NSMutableArray *items = [[NSMutableArray alloc]init];
     WorldBossViewController *ViewController1 = [[WorldBossViewController alloc] init];
     ViewControllerNavigationController *vc1 = [[ViewControllerNavigationController alloc] initWithFirstViewcontroller:ViewController1];
     
@@ -68,7 +69,7 @@
     ViewControllerNavigationController *vc5 = [[ViewControllerNavigationController alloc] initWithFirstViewcontroller:ViewController5];
 
     _secondArray = [[NSArray alloc]initWithObjects: vc1, vc2, vc3, vc4, vc5, nil];
-    
+
     /* Array1 */
     MainViewController *mainVC = [[MainViewController alloc] init];
     _firstArray = [[NSArray alloc] initWithObjects:[[ViewControllerNavigationController alloc] initWithFirstViewcontroller:mainVC], nil];
@@ -76,6 +77,15 @@
     /* 開啟切到陣列1顯示主畫面 */
     [self.tabBar setHidden:YES];
     [self setViewControllers:_firstArray animated:YES];
+    
+    
+    /* TabBar顯示文字顏色文字大小 未選中 */
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"Helvetica" size:12.0f],NSFontAttributeName,nil] forState:UIControlStateNormal];
+    /* TabBar顯示文字顏色文字大小 選中 */
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"Helvetica" size:12.0f],NSFontAttributeName,nil] forState:UIControlStateSelected];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,6 +109,7 @@
             [self.tabBar setHidden:NO];
             
             self.tabBar.backgroundColor  = VC_START_MENU_BACKGROUND_COLOR;
+            
         }
             break;
         

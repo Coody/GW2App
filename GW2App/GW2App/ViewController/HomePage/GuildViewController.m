@@ -7,12 +7,24 @@
 //
 
 #import "GuildViewController.h"
-
+//TabBar icon
+#import "GW2BroH_Tools.h"
 @interface GuildViewController ()
 
 @end
 
 @implementation GuildViewController
+
+//-(instancetype)init{
+//    self = [super init];
+//    if( self ){
+//        UIImage *image = [GW2BroH_Tools getImageWithString:@"ViewControllerGuild" withImageName:@"Bounty"];
+//        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"公會" image:image selectedImage:image];
+//        item.tag = 4;
+//        self.tabBarItem = item;
+//    }
+//    return self;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
