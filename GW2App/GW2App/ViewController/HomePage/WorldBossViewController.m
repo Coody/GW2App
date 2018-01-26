@@ -26,21 +26,13 @@
 
 @implementation WorldBossViewController
 
-//-(instancetype)init{
-//    self = [super init];
-//    if( self ){
-//        UIImage *image = [GW2BroH_Tools getImageWithString:@"NavigationControllerWorldBoss" withImageName:@"Boss"];
-//        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"世界王" image:image selectedImage:image];
-//        item.tag = 1;
-//        self.tabBarItem = item;
-//    }
-//    return self;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    
+    [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexWorldBoss];
+    
     /* ViewCell */
     self.content = @[ @"1", @"2", @"3",@"4",@"5",@"6",@"7",@"8",@"9"];
     

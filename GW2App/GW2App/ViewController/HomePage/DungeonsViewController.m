@@ -7,7 +7,8 @@
 //
 
 #import "DungeonsViewController.h"
-
+//Navigationtitle
+#import "ViewControllerNavigationController.h"
 //TabBar icon
 #import "GW2BroH_Tools.h"
 @interface DungeonsViewController ()
@@ -15,20 +16,12 @@
 @end
 
 @implementation DungeonsViewController
-//-(instancetype)init{
-//    self = [super init];
-//    if( self ){
-//        UIImage *image = [GW2BroH_Tools getImageWithString:@"ViewControllerDungeons" withImageName:@"dungeon"];
-//        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"副本" image:image selectedImage:image];
-//        item.tag = 3;
-//        self.tabBarItem = item;
-//    }
-//    return self;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /* 顯示title */
+    [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexDungeons];
 }
 
 - (void)didReceiveMemoryWarning {

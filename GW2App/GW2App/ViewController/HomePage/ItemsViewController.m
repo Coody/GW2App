@@ -9,32 +9,21 @@
 #import "GW2BroH_Tools.h"
 #import "ItemsViewController.h"
 #import "ViewControllerTabBar.h"
-
+//Navigationtitle
+#import "ViewControllerNavigationController.h"
 @interface ItemsViewController ()
 
 @end
 
 @implementation ItemsViewController
 
-//-(instancetype)init{
-//    self = [super init];
-//    if( self ){
-//        UIImage *image = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"tp"];
-//        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"拍賣場" image:image selectedImage:image];
-//        item.tag = 2;
-//        self.tabBarItem = item;
-//    }
-//    return self;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
-    //self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
-    
-
-
+    /* 顯示title */
+    [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexItems];
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
     button.center = self.view.center;

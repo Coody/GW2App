@@ -7,6 +7,8 @@
 //
 
 #import "MoreViewController.h"
+//Navigationtitle
+#import "ViewControllerNavigationController.h"
 //TabBar icon
 #import "GW2BroH_Tools.h"
 @interface MoreViewController ()
@@ -15,18 +17,12 @@
 
 @implementation MoreViewController
 
-//-(instancetype)init{
-//    self = [super init];
-//    if( self ){
-//        UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag: 5];
-//        self.tabBarItem = item;
-//    }
-//    return self;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /* 顯示title */
+    [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexMore];
 }
 
 - (void)didReceiveMemoryWarning {

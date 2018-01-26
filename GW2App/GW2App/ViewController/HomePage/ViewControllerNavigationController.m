@@ -41,8 +41,7 @@
     
     /* 顯示出ViewController */
     [self pushViewController:_vc animated:YES];
-    
-    
+
 }
 
 //使用NavigationControllerDelegate
@@ -59,81 +58,17 @@
         self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
         [self setNavigationBarHidden:NO animated:YES];
         
-        /* TabBarItem item */
-        UIImage *image = nil;
-        int iSel = 0;
-        NSArray *ss = @[@"世界王",@"拍賣場",@"副本",@"公會",@"More"];
-        
-        //------------------------
-//        UITabBarItem *item1 = nil;
-//        UITabBarItem *item  = nil;
-//        
-//        //UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostRecent tag:1];
-//        
-//        
-//        iSel = 0;
-//        image = [GW2BroH_Tools getImageWithString:@"NavigationControllerWorldBoss" withImageName:@"Boss"];
-//        //item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image selectedImage:image];
-//        item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image tag:0];
-//        self.tabBarItem = item1;
-//        
-//        iSel = 1;
-//        image = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"tp"];
-//        //item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image selectedImage:image];
-//        item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image tag:1];
-//        self.tabBarItem = item1;
-//        iSel = 2;
-//        image = [GW2BroH_Tools getImageWithString:@"ViewControllerDungeons" withImageName:@"dungeon"];
-//        item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image tag:2];
-//        //item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image selectedImage:image];
-//        self.tabBarItem = item1;
-//        iSel = 3;
-//        image = [GW2BroH_Tools getImageWithString:@"ViewControllerGuild" withImageName:@"Bounty"];
-//        //item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image selectedImage:image];
-//        item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image tag:3];
-//        self.tabBarItem = item1;
-//        iSel = 4;
-//        image = [GW2BroH_Tools getImageWithString:@"NavigationControllerWorldBoss" withImageName:@"Boss"];
-//        //item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image selectedImage:image];
-//        item1 = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image tag:4];
-//        self.tabBarItem = item1;
-//        
-//    
-//        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image selectedImage:image];
-//        self.tabBarItem = item;
-        //-------------------------
-        if([viewController isMemberOfClass:[WorldBossViewController class]])
-        {
-            iSel = 0;
-            image = [GW2BroH_Tools getImageWithString:@"NavigationControllerWorldBoss" withImageName:@"Boss"];
-        }
-        else
-        if([viewController isMemberOfClass:[ItemsViewController class]])
-        {
-            iSel = 1;
-            image = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"tp"];
-        }
-        else
-        if([viewController isMemberOfClass:[DungeonsViewController class]])
-        {
-            iSel = 2;
-            image = [GW2BroH_Tools getImageWithString:@"ViewControllerDungeons" withImageName:@"dungeon"];
-        }
-        else
-        if([viewController isMemberOfClass:[GuildViewController class]])
-        {
-            iSel = 3;
-            image = [GW2BroH_Tools getImageWithString:@"ViewControllerGuild" withImageName:@"Bounty"];
-        }
-        else
-        if([viewController isMemberOfClass:[MoreViewController class]])
-        {
-            iSel = 4;
-            image = [GW2BroH_Tools getImageWithString:@"NavigationControllerWorldBoss" withImageName:@"Boss"];
-        }
-        
-        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:ss[iSel] image:image selectedImage:image];
-        self.tabBarItem = item;
+        /* NavigationBar color */
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.navigationBar.frame.size.width, self.navigationBar.frame.size.height)];
+        view.backgroundColor = VC_NAVIGATION_BAR_COLOR;
+        [self.navigationBar setValue:view forKey:@"backgroundView"];
+
+        /* 改变UINavigationBar导航条标题颜色和字体 */
+        [viewController.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                   [UIColor whiteColor],NSForegroundColorAttributeName,
+                                                                                   [UIFont fontWithName:D_Default_Font_Name size:26.0f ],
+                                                                                   NSFontAttributeName,
+                                                                                   nil]];
 
     }
     
@@ -144,6 +79,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+/* 顯示title */
+-(void) setNavigationBarTiteleUse:(EnumTabBarIndex) index{
+    
+    /* TabBarItem item */
+    index -= 10;
+    NSArray *titleNavBar = @[@"世界王",@"Gem & 物品",@"副本 & 影片",@"公會相關",@"其他"];
+    self.title = titleNavBar[index];
+    UILabel *dyBoldLabel = [UILabel new];
+    dyBoldLabel.font = [UIFont boldSystemFontOfSize:26];
+    dyBoldLabel.text = titleNavBar[index];
+    dyBoldLabel.frame = CGRectMake(0, 0, 300, 40);
+    dyBoldLabel.textColor = [UIColor whiteColor];
+    dyBoldLabel.textAlignment = NSTextAlignmentCenter;
+    /* 设置阴影颜色 */
+    [dyBoldLabel setShadowColor:[UIColor blackColor]];
+    /* 设置阴影偏移量 */
+    [dyBoldLabel setShadowOffset:CGSizeMake(2, 2)];
+    /* 阴影透明度，默认0 */
+    dyBoldLabel.layer.shadowOpacity = 0.3;
+    /* 阴影半径，默认3 */
+    dyBoldLabel.layer.shadowRadius = 3;
+    [self.navigationBar addSubview:dyBoldLabel];
+}
 /*
 #pragma mark - Navigation
 
