@@ -38,16 +38,23 @@ typedef enum : int{
 
 @implementation WorldBossViewController
 
+-(instancetype)init{
+    self = [super init];
+    if( self ){
+        
+        [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
+        [self cofigureTableview];
+        [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexWorldBoss];
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexWorldBoss];
     
-    [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
-    
-    [self cofigureTableview];
     
     /* ViewCell */
     // 模擬取得資料
@@ -79,21 +86,22 @@ typedef enum : int{
 
 /* 取得BackgroundColor */
 -(UIImage *)getCellImageWithIndex:(NSUInteger)index{
-    if( self.blueBgImage == nil ){
-        self.blueBgImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_blue"];
-    }
     
-    UIImage *tempBg = self.blueBgImage;
-    if(index <= 0){
-        
-        if( self.redBgImage == nil ){
-            self.redBgImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
-        }
-        
-        tempBg = self.redBgImage;
-    }
-    else{
-        tempBg = self.blueBgImage;
+    UIImage *tempBg = nil;
+    switch (index) {
+        case EnumBossIndex_1:
+            tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
+            break;
+        case EnumBossIndex_2:
+        case EnumBossIndex_3:
+        case EnumBossIndex_4:
+        case EnumBossIndex_5:
+        case EnumBossIndex_6:
+        case EnumBossIndex_7:
+        case EnumBossIndex_8:
+        case EnumBossIndex_9:
+            tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_blue"];
+        break;
     }
     return tempBg;
 }

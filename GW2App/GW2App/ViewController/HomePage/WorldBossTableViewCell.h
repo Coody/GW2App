@@ -21,7 +21,11 @@ extern float const kWorldBossTableViewCellSelectedHight;
 
 @interface WorldBossTableViewCell : UITableViewCell
 
+@property (nonatomic , assign) BOOL isSelected;
+
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+
+
 
 -(void)setupCell:(WorldBossModel *)model;
 
@@ -30,7 +34,5 @@ extern float const kWorldBossTableViewCellSelectedHight;
               withBossImage:(UIImage *)bossImage
                   withTitle:(NSString *)title
                   withIndex:(BOOL) bSel;
-
-//-(void)setSelected:(BOOL)selected;
 
 @end

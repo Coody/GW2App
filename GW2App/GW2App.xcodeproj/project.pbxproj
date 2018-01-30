@@ -22,6 +22,7 @@
 		13C53D0A2008AB6E0081EBD7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D092008AB6E0081EBD7 /* MainViewController.m */; };
 		13C53D132008B6E80081EBD7 /* ViewControllerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D122008B6E80081EBD7 /* ViewControllerNavigationController.m */; };
 		13C53D162008BBCD0081EBD7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D152008BBCD0081EBD7 /* LoginViewController.m */; };
+		13F2C27F2020738C00D691CD /* ItemsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F2C27E2020738C00D691CD /* ItemsTableViewCell.m */; };
 		5AEA64EA20085DBF00758098 /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = 5AEA64E920085DBF00758098 /* Datas */; };
 		5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */; };
 		5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64F220085DD600758098 /* GW2BroH_Tools.m */; };
@@ -81,6 +82,8 @@
 		13C53D122008B6E80081EBD7 /* ViewControllerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerNavigationController.m; sourceTree = "<group>"; };
 		13C53D142008BBCD0081EBD7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		13C53D152008BBCD0081EBD7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		13F2C27D2020738C00D691CD /* ItemsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewCell.h; sourceTree = "<group>"; };
+		13F2C27E2020738C00D691CD /* ItemsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewCell.m; sourceTree = "<group>"; };
 		54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.release.xcconfig"; sourceTree = "<group>"; };
 		5AEA64E920085DBF00758098 /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Datas; sourceTree = "<group>"; };
 		5AEA64EC20085DD600758098 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTabBar.h; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				132B647D2010AA1000C3407E /* ItemsViewController.m */,
 				1368B128201EBBDF00E212CF /* ItemsViewController+_TableView.h */,
 				1368B129201EBBDF00E212CF /* ItemsViewController+_TableView.m */,
+				13F2C27D2020738C00D691CD /* ItemsTableViewCell.h */,
+				13F2C27E2020738C00D691CD /* ItemsTableViewCell.m */,
 				132B64762010A9E500C3407E /* DungeonsViewController.h */,
 				132B64772010A9E500C3407E /* DungeonsViewController.m */,
 				132B64702010A9C000C3407E /* GuildViewController.h */,
@@ -479,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F2C27F2020738C00D691CD /* ItemsTableViewCell.m in Sources */,
 				5AEA650020085EC300758098 /* WebApiRequest.m in Sources */,
 				132B647E2010AA1000C3407E /* ItemsViewController.m in Sources */,
 				5AEA64F920085E1B00758098 /* AppDelegate.m in Sources */,

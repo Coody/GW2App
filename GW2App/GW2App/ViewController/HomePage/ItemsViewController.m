@@ -19,21 +19,28 @@
 
 @implementation ItemsViewController
 
+-(instancetype)init{
+    self = [super init];
+    if( self ){
+        
+        [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
+        [self cofigureTableview];
+        [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexItems];
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
     /* 顯示title */
-    [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexItems];
     
 //    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
 //    button.center = self.view.center;
 //    [button setTitle:@"test" forState:(UIControlStateNormal)];
 //    [self.view addSubview:button];
 //    [button addTarget:self action:@selector(pressedBtn:) forControlEvents:(UIControlEventTouchUpInside)];
-    
-    [self cofigureTableview];
 }
 
 - (void)didReceiveMemoryWarning {

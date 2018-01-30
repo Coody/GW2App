@@ -9,7 +9,7 @@
 #import "ItemsViewController+_TableView.h"
 
 // for view
-//#import "TableViewCell.h"
+#import "ItemsTableViewCell.h"
 #import "WorldBossTableViewCell.h"
 // for Constant
 #import "Constants.h"
@@ -34,11 +34,9 @@ typedef enum : int{
     
     self.table.delegate = self;
     self.table.dataSource = self;
-    //self.table.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     [self.view addSubview:self.table];
     
-
 }
 
 /* TableViewDataSource */
@@ -47,19 +45,16 @@ typedef enum : int{
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    WorldBossTableViewCell *cell = (WorldBossTableViewCell*)[self.table dequeueReusableCellWithIdentifier:cellIdentifier];
+    ItemsTableViewCell *cell = (ItemsTableViewCell*)[self.table dequeueReusableCellWithIdentifier:cellIdentifier];
     
     /* 給定識別儲存格不在,會以識別子建立儲存格 */
     if(cell == nil) {
-        
         /* 使用特製cell */
-        cell = [[WorldBossTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        
+        cell = [[ItemsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-//    [cell setupItemsCellWithBgImage:[self getCellImageWithIndex:indexPath.row]
-//                     withTitle:[self getCellBossLabelWithIndex:indexPath.row]];
-    
+    [cell setupCellWithItemsImage:[self getCellImageWithIndex:indexPath.row]
+                          withTitle:[self getCellBossLabelWithIndex:indexPath.row]];
     
     return cell;
 }

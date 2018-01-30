@@ -10,8 +10,6 @@
 
 @interface WorldBossViewController : UIViewController
 
-@property (strong , nonatomic) UIImage *redBgImage;
-@property (strong , nonatomic) UIImage *blueBgImage;
 
 @property (strong , nonatomic) UITableView *worldBossTableView;
 @property (strong , nonatomic) NSArray *contentArray;

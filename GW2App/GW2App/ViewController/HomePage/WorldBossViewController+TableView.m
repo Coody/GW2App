@@ -21,7 +21,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 /* 初始化 */
 -(void)cofigureTableview
 {
-    self.worldBossTableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.worldBossTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - self.tabBarController.tabBar.frame.size.height - 65)];
     self.worldBossTableView.backgroundColor = [UIColor clearColor];
     /* cell無線條 */
     self.worldBossTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -78,8 +78,8 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     /* 清除被按下的色塊區域顏色 */
-    
     [tableView beginUpdates];
+    
     if( self.selectedIndex == indexPath.row ){
         /* 資料 */
         WorldBossModel *model = [self.contentArray objectAtIndex:indexPath.row];
@@ -93,7 +93,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
             model.isSelected = YES;
         }
         
-        cell.selected = model.isSelected;
+        cell.isSelected = model.isSelected;
     }
     else{
         /* 記錄目前選中的cell */
@@ -109,19 +109,13 @@ static NSString *const cellIdentifier = @"cellIdentifier";
         /* 目前的選取 */
         model.isSelected = YES;
         
-        cell.selected = model.isSelected;
-        selectedCell.selected = selectedModel.isSelected;
+        cell.isSelected = model.isSelected;
+        selectedCell.isSelected = selectedModel.isSelected;
     }
-    
     self.selectedIndex = indexPath.row;
-    [tableView beginUpdates];
     [tableView endUpdates];
-}
-
-/* viewcell 視圖底部 */
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return self.tabBarController.tabBar.frame.size.height + 12.0f;
+    
+    [self.worldBossTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 @end
