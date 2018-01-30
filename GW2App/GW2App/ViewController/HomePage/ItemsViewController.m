@@ -9,6 +9,8 @@
 #import "GW2BroH_Tools.h"
 #import "ItemsViewController.h"
 #import "ViewControllerTabBar.h"
+
+#import "ItemsViewController+_TableView.h"
 //Navigationtitle
 #import "ViewControllerNavigationController.h"
 @interface ItemsViewController ()
@@ -25,11 +27,13 @@
     /* 顯示title */
     [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexItems];
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
-    button.center = self.view.center;
-    [button setTitle:@"test" forState:(UIControlStateNormal)];
-    [self.view addSubview:button];
-    [button addTarget:self action:@selector(pressedBtn:) forControlEvents:(UIControlEventTouchUpInside)];
+//    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
+//    button.center = self.view.center;
+//    [button setTitle:@"test" forState:(UIControlStateNormal)];
+//    [self.view addSubview:button];
+//    [button addTarget:self action:@selector(pressedBtn:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    [self cofigureTableview];
 }
 
 - (void)didReceiveMemoryWarning {

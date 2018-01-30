@@ -13,8 +13,10 @@
 @property (strong , nonatomic) UIImage *redBgImage;
 @property (strong , nonatomic) UIImage *blueBgImage;
 
-@property (strong , nonatomic) UITableView *table;
-@property (strong , nonatomic) NSArray  *content;
+@property (strong , nonatomic) UITableView *worldBossTableView;
+@property (strong , nonatomic) NSArray *contentArray;
+
+@property (nonatomic , assign) NSUInteger selectedIndex;
 
 
 @end

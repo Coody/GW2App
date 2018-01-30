@@ -98,8 +98,13 @@
     [self setTabbar:vc4.tabBarItem];
     [self setTabbar:vc5.tabBarItem];
     
+//    [vc3.tabBar setBarTintColor:[UIColor whiteColor];
+//    [vc3.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAutomatic];
+//    [vc4.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    [vc5.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
 }
-
+/* 設定TabBar資料 */
 -(void)setTabbar:(UITabBarItem *)tabbarItem{
     
     /* TabBar顯示文字顏色文字大小 未選中 */
@@ -116,9 +121,10 @@
     /* TabBar顯示未選中 Icon */
     [self.tabBar setUnselectedItemTintColor:[UIColor grayColor]];
     
-    /* TabBar顯示選中 Icon */
-    [self.tabBar setBarTintColor:[UIColor whiteColor]];
-    [self.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    /* TabBar顯示選中 Icon */ //????
+//    [self.tabBar setBarTintColor:[UIColor whiteColor]];
+//    [self.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -176,7 +182,6 @@
           
             [self hy_setBackgroundViewWithColor:VC_NAVIGATION_BAR_COLOR];
             [self hy_setBackgroundViewWithAlpha:0];
-        
             
         }
             break;

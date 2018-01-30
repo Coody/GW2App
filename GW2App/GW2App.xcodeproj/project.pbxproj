@@ -12,8 +12,8 @@
 		132B64782010A9E600C3407E /* DungeonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B64772010A9E500C3407E /* DungeonsViewController.m */; };
 		132B647B2010A9F900C3407E /* WorldBossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B647A2010A9F900C3407E /* WorldBossViewController.m */; };
 		132B647E2010AA1000C3407E /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B647D2010AA1000C3407E /* ItemsViewController.m */; };
-		1385FF6F2015B64100E2E2E3 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385FF6D2015B64100E2E2E3 /* TableViewCell.m */; };
-		1385FF702015B64100E2E2E3 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1385FF6E2015B64100E2E2E3 /* TableViewCell.xib */; };
+		1368B12A201EBBDF00E212CF /* ItemsViewController+_TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1368B129201EBBDF00E212CF /* ItemsViewController+_TableView.m */; };
+		1368B12D202015DD00E212CF /* WorldBossTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1368B12C202015DD00E212CF /* WorldBossTableViewCell.m */; };
 		1385FF732015DA2200E2E2E3 /* WorldBossViewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385FF722015DA2200E2E2E3 /* WorldBossViewController+TableView.m */; };
 		139197B0200742FF00D2638C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 139197AF200742FF00D2638C /* main.m */; };
 		139197BB200742FF00D2638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139197BA200742FF00D2638C /* Assets.xcassets */; };
@@ -59,9 +59,10 @@
 		132B647A2010A9F900C3407E /* WorldBossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldBossViewController.m; sourceTree = "<group>"; };
 		132B647C2010AA1000C3407E /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
 		132B647D2010AA1000C3407E /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
-		1385FF6C2015B64100E2E2E3 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
-		1385FF6D2015B64100E2E2E3 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
-		1385FF6E2015B64100E2E2E3 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		1368B128201EBBDF00E212CF /* ItemsViewController+_TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ItemsViewController+_TableView.h"; sourceTree = "<group>"; };
+		1368B129201EBBDF00E212CF /* ItemsViewController+_TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ItemsViewController+_TableView.m"; sourceTree = "<group>"; };
+		1368B12B202015DD00E212CF /* WorldBossTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldBossTableViewCell.h; sourceTree = "<group>"; };
+		1368B12C202015DD00E212CF /* WorldBossTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldBossTableViewCell.m; sourceTree = "<group>"; };
 		1385FF712015DA2200E2E2E3 /* WorldBossViewController+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WorldBossViewController+TableView.h"; sourceTree = "<group>"; };
 		1385FF722015DA2200E2E2E3 /* WorldBossViewController+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WorldBossViewController+TableView.m"; sourceTree = "<group>"; };
 		139197AB200742FF00D2638C /* GW2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,17 +202,18 @@
 				132B647A2010A9F900C3407E /* WorldBossViewController.m */,
 				1385FF712015DA2200E2E2E3 /* WorldBossViewController+TableView.h */,
 				1385FF722015DA2200E2E2E3 /* WorldBossViewController+TableView.m */,
+				1368B12B202015DD00E212CF /* WorldBossTableViewCell.h */,
+				1368B12C202015DD00E212CF /* WorldBossTableViewCell.m */,
 				132B647C2010AA1000C3407E /* ItemsViewController.h */,
 				132B647D2010AA1000C3407E /* ItemsViewController.m */,
+				1368B128201EBBDF00E212CF /* ItemsViewController+_TableView.h */,
+				1368B129201EBBDF00E212CF /* ItemsViewController+_TableView.m */,
 				132B64762010A9E500C3407E /* DungeonsViewController.h */,
 				132B64772010A9E500C3407E /* DungeonsViewController.m */,
 				132B64702010A9C000C3407E /* GuildViewController.h */,
 				132B64712010A9C000C3407E /* GuildViewController.m */,
 				132B64732010A9CF00C3407E /* MoreViewController.h */,
 				132B64742010A9CF00C3407E /* MoreViewController.m */,
-				1385FF6C2015B64100E2E2E3 /* TableViewCell.h */,
-				1385FF6D2015B64100E2E2E3 /* TableViewCell.m */,
-				1385FF6E2015B64100E2E2E3 /* TableViewCell.xib */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -401,7 +403,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				139197BB200742FF00D2638C /* Assets.xcassets in Resources */,
-				1385FF702015B64100E2E2E3 /* TableViewCell.xib in Resources */,
 				5AEA64EA20085DBF00758098 /* Datas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +484,7 @@
 				5AEA64F920085E1B00758098 /* AppDelegate.m in Sources */,
 				132B647B2010A9F900C3407E /* WorldBossViewController.m in Sources */,
 				13C53D132008B6E80081EBD7 /* ViewControllerNavigationController.m in Sources */,
+				1368B12D202015DD00E212CF /* WorldBossTableViewCell.m in Sources */,
 				5AEA650120085EC300758098 /* WebsiteBase.m in Sources */,
 				5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */,
 				13C53D0A2008AB6E0081EBD7 /* MainViewController.m in Sources */,
@@ -492,8 +494,8 @@
 				132B64722010A9C000C3407E /* GuildViewController.m in Sources */,
 				132B64782010A9E600C3407E /* DungeonsViewController.m in Sources */,
 				13C53D162008BBCD0081EBD7 /* LoginViewController.m in Sources */,
-				1385FF6F2015B64100E2E2E3 /* TableViewCell.m in Sources */,
 				139197B0200742FF00D2638C /* main.m in Sources */,
+				1368B12A201EBBDF00E212CF /* ItemsViewController+_TableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

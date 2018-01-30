@@ -69,7 +69,6 @@
                                                                                    [UIFont fontWithName:D_Default_Font_Name size:26.0f ],
                                                                                    NSFontAttributeName,
                                                                                    nil]];
-
     }
     
 }
