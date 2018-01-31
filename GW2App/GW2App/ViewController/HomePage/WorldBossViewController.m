@@ -100,6 +100,7 @@ typedef enum : int{
         case EnumBossIndex_7:
         case EnumBossIndex_8:
         case EnumBossIndex_9:
+            // FIXME: 沒有 default
             tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_blue"];
         break;
     }
@@ -140,6 +141,7 @@ typedef enum : int{
             boss = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"shadowBehemoth"];
             break;
         default:
+            // FIXME: 如果沒有要做什麼，至少要秀個錯誤 Log ，要不就是一定會有個預設值，這裡留空未來會難找 bug。
             break;
     }
     return boss;
@@ -179,6 +181,7 @@ typedef enum : int{
             title = @"沼澤王";
             break;
         default:
+            // FIXME: 如果沒有要做什麼，至少要秀個錯誤 Log ，要不就是一定會有個預設值，這裡留空未來會難找 bug。
             break;
     }
     return title;

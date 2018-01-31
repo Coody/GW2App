@@ -29,6 +29,8 @@ static NSString *const kWorldBossPlistString = @"worldBoss.plst";
 
 
 @end
+
+// FIXME: 沒用的 code 要拿掉
 //typedef enum : int{
 //    EnumBossIndex_1 = 0,
 //    EnumBossIndex_2 = 1,
@@ -40,6 +42,7 @@ static NSString *const kWorldBossPlistString = @"worldBoss.plst";
 //    EnumBossIndex_8 = 7,
 //    EnumBossIndex_9 = 8,
 //}EnumBossIndex;
+
 @implementation WorldBossTableViewCell
 /*  覆寫自定TableViewCell */
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -131,6 +134,7 @@ static NSString *const kWorldBossPlistString = @"worldBoss.plst";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellSelectedHight)];
+            // FIXME: 這裡會有記憶體遺漏，在 block 內的 self 要改成 strongSelf
             /* 調整cell大小 */
             [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
             
@@ -145,6 +149,7 @@ static NSString *const kWorldBossPlistString = @"worldBoss.plst";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellHight)];
+            // FIXME: 這裡會有記憶體遺漏，在 block 內的 self 要改成 strongSelf
             /* 調整cell大小 */
             [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
         }];

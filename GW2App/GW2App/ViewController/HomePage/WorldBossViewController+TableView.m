@@ -15,6 +15,7 @@
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
 
+// FIXME: 這個應該要拿到 TableViewCell 去才適合。
 static NSString *const cellIdentifier = @"cellIdentifier";
 
 @implementation WorldBossViewController (TableView)
@@ -77,6 +78,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 /* TableViewDelegate */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
+    // FIXME: 註解與所做的事情對不起來。
     /* 清除被按下的色塊區域顏色 */
     [tableView beginUpdates];
     
