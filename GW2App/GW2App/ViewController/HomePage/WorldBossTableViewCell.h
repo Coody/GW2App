@@ -10,6 +10,7 @@
 
 extern float const kWorldBossTableViewCellHight;
 extern float const kWorldBossTableViewCellSelectedHight;
+extern NSString *const cellIdentifier;
 
 @interface WorldBossModel : NSObject
 @property (nonatomic , assign) BOOL isSelected;
@@ -20,6 +21,7 @@ extern float const kWorldBossTableViewCellSelectedHight;
 
 
 @interface WorldBossTableViewCell : UITableViewCell
+
 
 @property (nonatomic , assign) BOOL isSelected;
 

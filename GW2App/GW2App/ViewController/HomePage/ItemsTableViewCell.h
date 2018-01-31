@@ -15,9 +15,6 @@
 
 @interface ItemsTableViewCell : UITableViewCell
 
-//@property (nonatomic , strong) UIImageView *bgImageView;
-//@property (nonatomic , strong) UIImageView *bossImageView;
-//@property (nonatomic , strong) UILabel *titleLabel;
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 

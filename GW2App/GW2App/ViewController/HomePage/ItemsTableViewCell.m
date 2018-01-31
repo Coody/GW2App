@@ -7,7 +7,6 @@
 //
 
 #import "ItemsTableViewCell.h"
-//float const kWorldBossTableViewCellHight = 110;
 
 
 @implementation ItemsModel

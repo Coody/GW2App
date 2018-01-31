@@ -98,7 +98,11 @@ typedef enum : int{
         case EnumBossIndex_8:
         case EnumBossIndex_9:
             tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_blue"];
-        break;
+            break;
+        default:
+            tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
+            NSLog(@"Error");
+            break;
     }
     return tempBg;
 }
@@ -137,6 +141,8 @@ typedef enum : int{
             boss = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"shadowBehemoth"];
             break;
         default:
+            boss = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"teq"];
+            NSLog(@"Error");
             break;
     }
     return boss;
@@ -176,6 +182,8 @@ typedef enum : int{
             title = @"沼澤王";
             break;
         default:
+            title = @"Error";
+            NSLog(@"Error");
             break;
     }
     return title;

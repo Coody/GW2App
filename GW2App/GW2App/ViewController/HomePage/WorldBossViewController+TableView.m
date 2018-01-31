@@ -15,8 +15,6 @@
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
 
-static NSString *const cellIdentifier = @"cellIdentifier";
-
 @implementation WorldBossViewController (TableView)
 /* 初始化 */
 -(void)cofigureTableview
@@ -77,7 +75,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 /* TableViewDelegate */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    /* 清除被按下的色塊區域顏色 */
+
     [tableView beginUpdates];
     
     if( self.selectedIndex == indexPath.row ){

@@ -16,6 +16,7 @@ float const kWorldBossTableViewCellHight = 110;
 float const kWorldBossTableViewCellSelectedHight = 440;
 
 static NSString *const kWorldBossPlistString = @"worldBoss.plst";
+NSString *const cellIdentifier = @"cellIdentifier";
 
 @implementation WorldBossModel
 @end
@@ -118,8 +119,9 @@ static NSString *const kWorldBossPlistString = @"worldBoss.plst";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellSelectedHight)];
+            // FIXME: 這裡會有記憶體遺漏，在 block 內的 self 要改成 strongSelf
             /* 調整cell大小 */
-            [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
+            [strongSelf setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
             
         }];
     }
@@ -132,8 +134,9 @@ static NSString *const kWorldBossPlistString = @"worldBoss.plst";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellHight)];
+            // FIXME: 這裡會有記憶體遺漏，在 block 內的 self 要改成 strongSelf
             /* 調整cell大小 */
-            [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
+            [strongSelf setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
         }];
     }
 }
