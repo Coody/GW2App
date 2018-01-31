@@ -21,26 +21,13 @@ static NSString *const kWorldBossPlistString = @"worldBoss.plst";
 @end
 
 @interface WorldBossTableViewCell()
-
-
 @property (nonatomic , strong) UIImageView *bgImageView;
 @property (nonatomic , strong) UIImageView *bossImageView;
 @property (nonatomic , strong) UILabel *titleLabel;
-
-
 @end
-//typedef enum : int{
-//    EnumBossIndex_1 = 0,
-//    EnumBossIndex_2 = 1,
-//    EnumBossIndex_3 = 2,
-//    EnumBossIndex_4 = 3,
-//    EnumBossIndex_5 = 4,
-//    EnumBossIndex_6 = 5,
-//    EnumBossIndex_7 = 6,
-//    EnumBossIndex_8 = 7,
-//    EnumBossIndex_9 = 8,
-//}EnumBossIndex;
+
 @implementation WorldBossTableViewCell
+
 /*  覆寫自定TableViewCell */
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -83,7 +70,7 @@ static NSString *const kWorldBossPlistString = @"worldBoss.plst";
         _bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width*0.05, 0.0f, self.frame.size.width*0.9, kWorldBossTableViewCellHight*0.9)];
         [self addSubview:_bgImageView];
     }
-    
+    /* 指定圖片延伸範圍 */
     [_bgImageView setImage:[bgImage resizableImageWithCapInsets:UIEdgeInsetsMake( 15, 15, 25, 25) resizingMode:UIImageResizingModeStretch]];
     
     

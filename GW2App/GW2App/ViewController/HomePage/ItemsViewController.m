@@ -5,6 +5,7 @@
 //  Created by min_liu on 2018/1/18.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
+
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
 #import "ItemsViewController.h"
@@ -13,11 +14,21 @@
 #import "ItemsViewController+_TableView.h"
 //Navigationtitle
 #import "ViewControllerNavigationController.h"
-@interface ItemsViewController ()
 
+#import "ItemsTableViewCell.h"
+
+typedef enum : int{
+    EnumItemIndex_1 = 0,
+    EnumItemIndex_2 = 1,
+    
+}EnumBossIndex;
+
+@interface ItemsViewController ()
 @end
 
 @implementation ItemsViewController
+
+
 
 -(instancetype)init{
     self = [super init];
@@ -41,6 +52,56 @@
 //    [button setTitle:@"test" forState:(UIControlStateNormal)];
 //    [self.view addSubview:button];
 //    [button addTarget:self action:@selector(pressedBtn:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    /* ViewCell */
+    // 模擬取得資料
+    // 網路端假資料
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (int i = 0 ; i < 2; i++ ) {
+        ItemsModel *model = [[ItemsModel alloc] init];
+        model.bg = [self getCellImageWithIndex:i];
+        model.timetitle = [self getCellTimeLabelWithIndex:i];
+        [array addObject:model];
+    }
+    
+    // 觸發 TableView Reload
+    self.contentArray = array;
+}
+
+/* 取得BackgroundColor */
+-(UIImage *)getCellImageWithIndex:(NSUInteger)index{
+    
+    UIImage *tempBg = nil;
+    
+    switch (index) {
+        case EnumItemIndex_1:
+            tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"goldCell"];
+            break;
+        case EnumItemIndex_2:
+            tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"gemCell"];
+            break;
+        default:
+            break;
+    }
+    return tempBg;
+}
+
+/* 取得BossTitle */
+-(NSString *)getCellTimeLabelWithIndex:(NSUInteger)index{
+    
+    NSString *title = @"";
+    
+    switch (index) {
+        case EnumItemIndex_1:
+            title = @"屍龍";
+            break;
+        case EnumItemIndex_2:
+            title = @"蟲王";
+            break;
+        default:
+            break;
+    }
+    return title;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +112,7 @@
 -(void)pressedBtn:(id)sender{
     [(ViewControllerTabBar *)self.tabBarController changeViewControllerWithIndex:EnumTabBarIndexStartMenu];
 }
+
 /*
 #pragma mark - Navigation
 

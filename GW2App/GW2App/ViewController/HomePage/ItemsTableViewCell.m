@@ -7,11 +7,32 @@
 //
 
 #import "ItemsTableViewCell.h"
+//float const kWorldBossTableViewCellHight = 110;
+
+
+@implementation ItemsModel
+@end
+
+
+@interface ItemsTableViewCell()
+@property (nonatomic , strong) UIImageView *bgImageView;
+@property (nonatomic , strong) UILabel *titleLabel;
+@end
+
 
 @implementation ItemsTableViewCell
 
-
-
+/*  覆寫自定TableViewCell */
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
+    {
+        [self setBackgroundColor:[UIColor clearColor]];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 110)];
+    }
+    return self;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -24,43 +45,37 @@
     // Configure the view for the selected state
 }
 
+-(void)setupCell:(ItemsModel *)model{
+    [self setupCellWithItemsImage:model.bg
+                        withTitle:model.timetitle];
+}
 
 -(void)setupCellWithItemsImage:(UIImage *)bgImage
                   withTitle:(NSString *)title{
     
 
     /* BackgroundImage */
-    // initial
+    
     if( _bgImageView == nil ){
-        _bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width*0.05, 0.0f, self.frame.size.width, self.frame.size.height)];
-        
+        _bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.frame.size.width,110)];
+        [self addSubview:_bgImageView];
     }
-    [self addSubview:_bgImageView];
     
+    [_bgImageView setImage:[bgImage resizableImageWithCapInsets:UIEdgeInsetsMake( 15, 15, 25, 25) resizingMode:UIImageResizingModeStretch]];
     
-    
-    
-//    /* BossImage */
-//    if(_bossImageView == nil ){
-//        _bossImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15,
-//                                                                       _bgImageView.frame.size.width*0.36,
-//                                                                       _bgImageView.frame.size.height *0.6)];
-//        [_bgImageView addSubview:_bossImageView];
-//    }
-//    [_bossImageView setImage:bossImage];
     
     
     
     /* bossTitle */
-    if(_titleLabel == nil){
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_bgImageView.center.x, 15.0f, 100.0f, 30.0f)];
-
-    }
-    _titleLabel.font = [UIFont boldSystemFontOfSize:22.0f];
-    [_titleLabel setTextColor: [UIColor whiteColor]];
-    [_bgImageView addSubview:_titleLabel];
-    [_titleLabel setText:title];
-    
+//    if(_titleLabel == nil){
+//        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_bgImageView.center.x, 15.0f, 100.0f, 30.0f)];
+//        _titleLabel.font = [UIFont boldSystemFontOfSize:22.0f];
+//        [_titleLabel setTextColor: [UIColor whiteColor]];
+//        [_bgImageView addSubview:_titleLabel];
+//    }
+//    
+//    [_titleLabel setText:title];
 }
+
 
 @end

@@ -10,32 +10,24 @@
 
 // for view
 #import "ItemsTableViewCell.h"
-#import "WorldBossTableViewCell.h"
 // for Constant
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
 static NSString *const cellIdentifier = @"cellItem";
 
 @implementation ItemsViewController (_TableView)
-
-
-typedef enum : int{
-    EnumItemIndex_1 = 0,
-    EnumItemIndex_2 = 1,
-
-}EnumBossIndex;
-
+/* 初始化 */
 -(void)cofigureTableview
 {
-    self.table = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    self.table.backgroundColor = [UIColor clearColor];
+    self.ItemTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - self.tabBarController.tabBar.frame.size.height)];
+    self.ItemTableView.backgroundColor = [UIColor clearColor];
     /* cell無線條 */
-    self.table.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.ItemTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    self.table.delegate = self;
-    self.table.dataSource = self;
+    self.ItemTableView.delegate = self;
+    self.ItemTableView.dataSource = self;
     
-    [self.view addSubview:self.table];
+    [self.view addSubview:self.ItemTableView];
     
 }
 
@@ -45,7 +37,7 @@ typedef enum : int{
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    ItemsTableViewCell *cell = (ItemsTableViewCell*)[self.table dequeueReusableCellWithIdentifier:cellIdentifier];
+    ItemsTableViewCell *cell = (ItemsTableViewCell*)[self.ItemTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     /* 給定識別儲存格不在,會以識別子建立儲存格 */
     if(cell == nil) {
@@ -53,16 +45,14 @@ typedef enum : int{
         cell = [[ItemsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    [cell setupCellWithItemsImage:[self getCellImageWithIndex:indexPath.row]
-                          withTitle:[self getCellBossLabelWithIndex:indexPath.row]];
-    
+    [cell setupCell:[self.contentArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
 /* 每個區段多少資料 */
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return self.contentArray.count;
 }
 
 /* 多少個區段資料 */
@@ -105,45 +95,6 @@ typedef enum : int{
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return self.tabBarController.tabBar.frame.size.height + 10.0f;
-}
-
-/* 取得BackgroundColor */
--(UIImage *)getCellImageWithIndex:(NSUInteger)index{
-    if( self.blueBgImage == nil ){
-        self.blueBgImage = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"goldCell"];
-    }
-    
-    UIImage *tempBg = self.blueBgImage;
-    if(index <= 0){
-        
-        if( self.redBgImage == nil ){
-            self.redBgImage = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"gemCell"];
-        }
-        
-        tempBg = self.redBgImage;
-    }
-    else{
-        tempBg = self.blueBgImage;
-    }
-    return tempBg;
-}
-
-/* 取得BossTitle */
--(NSString *)getCellBossLabelWithIndex:(NSUInteger)index{
-    
-    UILabel *myLabel = [[UILabel alloc] init];
-    
-    switch (index) {
-        case EnumItemIndex_1:
-            myLabel.text = @"屍龍";
-            break;
-        case EnumItemIndex_2:
-            myLabel.text = @"蟲王";
-            break;
-        default:
-            break;
-    }
-    return myLabel.text;
 }
 
 
