@@ -50,14 +50,7 @@ typedef enum : NSInteger{
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    /* 顯示title */
-    
-//    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
-//    button.center = self.view.center;
-//    [button setTitle:@"test" forState:(UIControlStateNormal)];
-//    [self.view addSubview:button];
-//    [button addTarget:self action:@selector(pressedBtn:) forControlEvents:(UIControlEventTouchUpInside)];
-    
+
     /* 與網站連線 */
     [[WebsiteBase sharedInstance] setHomeUrl:@"https://api.guildwars2.com/v2"];
     /* ViewCell */
@@ -89,6 +82,7 @@ typedef enum : NSInteger{
             tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"gemCell"];
             break;
         default:
+            NSLog(@"Error");
             break;
     }
     return tempBg;
@@ -101,12 +95,11 @@ typedef enum : NSInteger{
     
     switch (index) {
         case EnumItemIndex_1:
-            title = @"屍龍";
-            break;
         case EnumItemIndex_2:
-            title = @"蟲王";
+            title = @"time";
             break;
         default:
+            NSLog(@"Error");
             break;
     }
     return title;

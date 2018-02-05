@@ -32,8 +32,6 @@ static NSString *const cellIdentifier = @"cellItem";
     self.ItemTableView.dataSource = self;
     
     [self.view addSubview:self.ItemTableView];
-    
-
 }
 
 /* TableViewDataSource */
@@ -77,20 +75,19 @@ static NSString *const cellIdentifier = @"cellItem";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIActivityIndicatorView *activity  = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    //菊花开始
-    [activity startAnimating];
     
     ItemsTableViewCell *cell = [self.ItemTableView cellForRowAtIndexPath:indexPath];
     ItemsModel *model = [self.contentArray objectAtIndex:indexPath.row];
     
-    model.sel = indexPath.row + 1;
-    [cell setupCell:model];
+    /* Loading狀態時不做連web要資料動作 */
+    if( cell.loadingView == nil)
+    {
+        /* LoadingStare */
+        [cell showLoading];
     
-    
-    //菊花结束
-    [activity stopAnimating];
-    
+        model.sel = indexPath.row + 1;
+        [cell setupCell:model];
+    }
 }
 
 

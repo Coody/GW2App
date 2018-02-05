@@ -5,6 +5,7 @@
 //  Created by min_liu on 2018/1/30.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
+#import <objc/runtime.h>
 
 #import "ItemsTableViewCell.h"
 
@@ -14,6 +15,8 @@
 //web gold轉換
 #import "GoldRequest.h"
 #import "GemsRequest.h"
+
+static char ACTIVITY_INDICATOR_KEY;
 
 typedef enum : NSInteger{
     EnumItemIndex_None       = 0,
@@ -38,6 +41,16 @@ typedef enum : NSInteger{
 
 
 @implementation ItemsTableViewCell
+/* 回傳目前LoadingView狀態 */
+- (UIActivityIndicatorView *)loadingView {
+    return objc_getAssociatedObject(self, &ACTIVITY_INDICATOR_KEY);
+}
+
+/* 設定LoadingView狀態 */
+- (void)setLoadingView:(UIActivityIndicatorView *)loadingView {
+    objc_setAssociatedObject(self, &ACTIVITY_INDICATOR_KEY, loadingView, OBJC_ASSOCIATION_RETAIN);
+}
+
 
 /*  覆寫自定TableViewCell */
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -72,7 +85,7 @@ typedef enum : NSInteger{
     //正規化取得的系統時間並顯示
     NSLog(@"更新時間: %@", [formatter stringFromDate:date]);
     
-    model.timetitle = [formatter stringFromDate:date];
+    model.timetitle = [NSString stringWithFormat:@"更新時間 %@",[formatter stringFromDate:date]];
     [self setupCellWithItemsImage:model.bg
                         withTitle:model.timetitle
                           withSel:model.sel];
@@ -81,17 +94,22 @@ typedef enum : NSInteger{
     _goldRequest = [[GoldRequest alloc] initWithSuccessBlock:^(NSError *error, id result) {
         __strong __typeof(weakSelf) strongSelf = weakSelf;
 
-                _readLabel.text = [NSString stringWithFormat:@"%ld", (long)_goldRequest.resdCoinPreGem];
+        _readLabel.text = [NSString stringWithFormat:@"%ld", (long)_goldRequest.resdCoinPreGem];
+        
+        /* LoadingEnd */
+        [strongSelf removeLoading];
         
     } withFailBlock:^(NSError *error, NSNumber *errorCode, NSString *errorMsg) {
     }];
     
     //取得gems
-//    __weak __typeof(self)weakSelf = self;
     _gemRequest = [[GemsRequest alloc] initWithSuccessBlock:^(NSError *error, id result) {
         __strong __typeof(weakSelf) strongSelf = weakSelf;
         
         _readLabel.text = [NSString stringWithFormat:@"%ld", (long)_gemRequest.resdGemPreCoin];
+        
+        /* LoadingEnd */
+        [strongSelf removeLoading];
         
     } withFailBlock:^(NSError *error, NSNumber *errorCode, NSString *errorMsg) {
     }];
@@ -119,7 +137,6 @@ typedef enum : NSInteger{
             NSLog(@"Error");
             break;
     }
-    
 }
 
 -(void)setupCellWithItemsImage:(UIImage *)bgImage
@@ -136,7 +153,7 @@ typedef enum : NSInteger{
     
     //Label
     if(_TimeLabel == nil){
-        _TimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150.0f, 5.0f, 180.0f, 15.0f)];
+        _TimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 5.0f, 180.0f, 15.0f)];
         _TimeLabel.font = [UIFont boldSystemFontOfSize:12.0f];
         [_TimeLabel setTextColor: [UIColor whiteColor]];
         [self addSubview:_TimeLabel];
@@ -192,6 +209,35 @@ typedef enum : NSInteger{
             break;
     }
 
+}
+
+/* 展示Loading（默认灰色）*/
+- (void)showLoading {
+    // 默认展示灰色loading
+    [self showLoadingWithColor:[UIColor grayColor]];
+}
+
+/* 展示指定颜色的Loading */
+- (void)showLoadingWithColor:(UIColor *)color {
+    if (self.loadingView) {
+        /* 重複執行時移除 */
+        [self.loadingView removeFromSuperview];
+        self.loadingView = nil;
+    }
+    
+    self.loadingView = [[UIActivityIndicatorView alloc] initWithFrame:self.bounds];
+    [self addSubview:self.loadingView];
+    self.loadingView.color = color;
+    [self.loadingView startAnimating];
+    self.loadingView.userInteractionEnabled = NO;
+}
+
+/* 移除Loading */
+- (void)removeLoading {
+    if (self.loadingView) {
+        [self.loadingView removeFromSuperview];
+        self.loadingView = nil;
+    }
 }
 
 @end

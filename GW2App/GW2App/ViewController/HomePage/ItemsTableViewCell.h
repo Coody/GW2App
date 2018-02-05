@@ -26,5 +26,16 @@
                      withTitle:(NSString *)title
                        withSel:(NSInteger)sel;
 
+/* 回傳目前LoadingView狀態 */
+- (UIActivityIndicatorView *)loadingView;
+
+/* 展示Loading（默认灰色) */
+- (void)showLoading;
+
+/* 展示指定颜色的Loading */
+- (void)showLoadingWithColor:(UIColor *)color;
+
+/* 移除Loading */
+- (void)removeLoading;
 
 @end
