@@ -17,12 +17,19 @@
 
 #import "ItemsTableViewCell.h"
 
+#import "WebsiteBase.h"
 typedef enum : int{
     EnumItemIndex_1 = 0,
     EnumItemIndex_2 = 1,
     
-}EnumBossIndex;
+}EnumItemIndex;
 
+typedef enum : NSInteger{
+    EnumItemIndex_None       = 0,
+    EnumItemIndex_GoldToGems = 1,
+    EnumItemIndex_GemsToGold = 2,
+    
+}EnumItemsCange;
 @interface ItemsViewController ()
 @end
 
@@ -33,11 +40,9 @@ typedef enum : int{
 -(instancetype)init{
     self = [super init];
     if( self ){
-        
         [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         [self cofigureTableview];
         [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexItems];
-        
     }
     return self;
 }
@@ -53,6 +58,8 @@ typedef enum : int{
 //    [self.view addSubview:button];
 //    [button addTarget:self action:@selector(pressedBtn:) forControlEvents:(UIControlEventTouchUpInside)];
     
+    /* 與網站連線 */
+    [[WebsiteBase sharedInstance] setHomeUrl:@"https://api.guildwars2.com/v2"];
     /* ViewCell */
     // 模擬取得資料
     // 網路端假資料
@@ -61,6 +68,7 @@ typedef enum : int{
         ItemsModel *model = [[ItemsModel alloc] init];
         model.bg = [self getCellImageWithIndex:i];
         model.timetitle = [self getCellTimeLabelWithIndex:i];
+        model.sel = EnumItemIndex_None;
         [array addObject:model];
     }
     
@@ -103,6 +111,7 @@ typedef enum : int{
     }
     return title;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

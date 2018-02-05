@@ -15,7 +15,11 @@
 #import "GW2BroH_Tools.h"
 static NSString *const cellIdentifier = @"cellItem";
 
+
+
+
 @implementation ItemsViewController (_TableView)
+
 /* 初始化 */
 -(void)cofigureTableview
 {
@@ -29,6 +33,7 @@ static NSString *const cellIdentifier = @"cellItem";
     
     [self.view addSubview:self.ItemTableView];
     
+
 }
 
 /* TableViewDataSource */
@@ -71,30 +76,21 @@ static NSString *const cellIdentifier = @"cellItem";
 /* TableViewDelegate */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    //NSLog(@"title of cell %@", [_content objectAtIndex:indexPath.row]);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIActivityIndicatorView *activity  = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    //菊花开始
+    [activity startAnimating];
     
-    /* 顯示系統時間 */
-//    NSDate *currentDate = [NSDate date];
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateStyle:NSDateFormatterShortStyle];
-//    [formatter setTimeStyle:NSDateFormatterMediumStyle];
-//    NSString *currentDateString = [formatter stringFromDate:currentDate];
-//    NSLog(@"更新時間: %@", currentDateString);
+    ItemsTableViewCell *cell = [self.ItemTableView cellForRowAtIndexPath:indexPath];
+    ItemsModel *model = [self.contentArray objectAtIndex:indexPath.row];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    NSDate *date = [NSDate date];
-    //正規化的格式設定
-    [formatter setDateFormat:@"YYYY/MM/dd HH:mm:ss"];
-    //正規化取得的系統時間並顯示
-    //dateLabel.text = [formatter stringFromDate:date];
-    NSLog(@"更新時間: %@", [formatter stringFromDate:date]);
-}
-
-/* viewcell 視圖底部 */
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return self.tabBarController.tabBar.frame.size.height + 10.0f;
+    model.sel = indexPath.row + 1;
+    [cell setupCell:model];
+    
+    
+    //菊花结束
+    [activity stopAnimating];
+    
 }
 
 

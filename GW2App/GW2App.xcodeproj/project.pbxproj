@@ -12,6 +12,7 @@
 		132B64782010A9E600C3407E /* DungeonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B64772010A9E500C3407E /* DungeonsViewController.m */; };
 		132B647B2010A9F900C3407E /* WorldBossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B647A2010A9F900C3407E /* WorldBossViewController.m */; };
 		132B647E2010AA1000C3407E /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132B647D2010AA1000C3407E /* ItemsViewController.m */; };
+		1335EBDD20230B8300809270 /* GoldRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1335EBDC20230B8300809270 /* GoldRequest.m */; };
 		1368B12A201EBBDF00E212CF /* ItemsViewController+_TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1368B129201EBBDF00E212CF /* ItemsViewController+_TableView.m */; };
 		1368B12D202015DD00E212CF /* WorldBossTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1368B12C202015DD00E212CF /* WorldBossTableViewCell.m */; };
 		1385FF732015DA2200E2E2E3 /* WorldBossViewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385FF722015DA2200E2E2E3 /* WorldBossViewController+TableView.m */; };
@@ -22,6 +23,7 @@
 		13C53D0A2008AB6E0081EBD7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D092008AB6E0081EBD7 /* MainViewController.m */; };
 		13C53D132008B6E80081EBD7 /* ViewControllerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D122008B6E80081EBD7 /* ViewControllerNavigationController.m */; };
 		13C53D162008BBCD0081EBD7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D152008BBCD0081EBD7 /* LoginViewController.m */; };
+		13EDBAD92024703C00A09745 /* GemsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EDBAD82024703C00A09745 /* GemsRequest.m */; };
 		13F2C27F2020738C00D691CD /* ItemsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F2C27E2020738C00D691CD /* ItemsTableViewCell.m */; };
 		5AEA64EA20085DBF00758098 /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = 5AEA64E920085DBF00758098 /* Datas */; };
 		5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */; };
@@ -60,6 +62,8 @@
 		132B647A2010A9F900C3407E /* WorldBossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldBossViewController.m; sourceTree = "<group>"; };
 		132B647C2010AA1000C3407E /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
 		132B647D2010AA1000C3407E /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
+		1335EBDB20230B8300809270 /* GoldRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldRequest.h; sourceTree = "<group>"; };
+		1335EBDC20230B8300809270 /* GoldRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldRequest.m; sourceTree = "<group>"; };
 		1368B128201EBBDF00E212CF /* ItemsViewController+_TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ItemsViewController+_TableView.h"; sourceTree = "<group>"; };
 		1368B129201EBBDF00E212CF /* ItemsViewController+_TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ItemsViewController+_TableView.m"; sourceTree = "<group>"; };
 		1368B12B202015DD00E212CF /* WorldBossTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldBossTableViewCell.h; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		13C53D122008B6E80081EBD7 /* ViewControllerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerNavigationController.m; sourceTree = "<group>"; };
 		13C53D142008BBCD0081EBD7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		13C53D152008BBCD0081EBD7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		13EDBAD72024703C00A09745 /* GemsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemsRequest.h; sourceTree = "<group>"; };
+		13EDBAD82024703C00A09745 /* GemsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemsRequest.m; sourceTree = "<group>"; };
 		13F2C27D2020738C00D691CD /* ItemsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewCell.h; sourceTree = "<group>"; };
 		13F2C27E2020738C00D691CD /* ItemsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewCell.m; sourceTree = "<group>"; };
 		54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +225,10 @@
 				132B64712010A9C000C3407E /* GuildViewController.m */,
 				132B64732010A9CF00C3407E /* MoreViewController.h */,
 				132B64742010A9CF00C3407E /* MoreViewController.m */,
+				1335EBDB20230B8300809270 /* GoldRequest.h */,
+				1335EBDC20230B8300809270 /* GoldRequest.m */,
+				13EDBAD72024703C00A09745 /* GemsRequest.h */,
+				13EDBAD82024703C00A09745 /* GemsRequest.m */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -493,6 +503,7 @@
 				1368B12D202015DD00E212CF /* WorldBossTableViewCell.m in Sources */,
 				5AEA650120085EC300758098 /* WebsiteBase.m in Sources */,
 				5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */,
+				13EDBAD92024703C00A09745 /* GemsRequest.m in Sources */,
 				13C53D0A2008AB6E0081EBD7 /* MainViewController.m in Sources */,
 				132B64752010A9CF00C3407E /* MoreViewController.m in Sources */,
 				5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */,
@@ -502,6 +513,7 @@
 				13C53D162008BBCD0081EBD7 /* LoginViewController.m in Sources */,
 				139197B0200742FF00D2638C /* main.m in Sources */,
 				1368B12A201EBBDF00E212CF /* ItemsViewController+_TableView.m in Sources */,
+				1335EBDD20230B8300809270 /* GoldRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +719,94 @@
 			};
 			name = Release;
 		};
+		13EDBAD0202410E300A09745 /* Debug copy */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = "Debug copy";
+		};
+		13EDBAD1202410E300A09745 /* Debug copy */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M6UMF9TFFD;
+				INFOPLIST_FILE = GW2App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2App;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = "Debug copy";
+		};
+		13EDBAD2202410E300A09745 /* Debug copy */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GW2AppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2AppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GW2App.app/GW2App";
+			};
+			name = "Debug copy";
+		};
+		13EDBAD3202410E300A09745 /* Debug copy */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GW2AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2AppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GW2App;
+			};
+			name = "Debug copy";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -714,6 +814,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				139197D6200742FF00D2638C /* Debug */,
+				13EDBAD0202410E300A09745 /* Debug copy */,
 				139197D7200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -723,6 +824,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				139197D9200742FF00D2638C /* Debug */,
+				13EDBAD1202410E300A09745 /* Debug copy */,
 				139197DA200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -732,6 +834,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				139197DC200742FF00D2638C /* Debug */,
+				13EDBAD2202410E300A09745 /* Debug copy */,
 				139197DD200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -741,6 +844,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				139197DF200742FF00D2638C /* Debug */,
+				13EDBAD3202410E300A09745 /* Debug copy */,
 				139197E0200742FF00D2638C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

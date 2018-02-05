@@ -119,7 +119,6 @@ NSString *const cellIdentifier = @"cellIdentifier";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellSelectedHight)];
-            // FIXME: 這裡會有記憶體遺漏，在 block 內的 self 要改成 strongSelf
             /* 調整cell大小 */
             [strongSelf setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
             
@@ -134,7 +133,6 @@ NSString *const cellIdentifier = @"cellIdentifier";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellHight)];
-            // FIXME: 這裡會有記憶體遺漏，在 block 內的 self 要改成 strongSelf
             /* 調整cell大小 */
             [strongSelf setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
         }];

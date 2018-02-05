@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ItemsModel : NSObject
-@property (nonatomic , strong) UIImage *bg;
+@property (nonatomic , strong) UIImage  *bg;
 @property (nonatomic , strong) NSString *timetitle;
+@property (nonatomic , assign) NSUInteger sel;
 @end
 
 @interface ItemsTableViewCell : UITableViewCell
@@ -22,7 +23,8 @@
 
 /* 貼上cell資料 */
 -(void)setupCellWithItemsImage:(UIImage *)bgImage
-                  withTitle:(NSString *)title;
+                     withTitle:(NSString *)title
+                       withSel:(NSInteger)sel;
 
 
 @end

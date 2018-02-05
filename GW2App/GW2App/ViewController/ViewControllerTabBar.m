@@ -98,11 +98,6 @@
     [self setTabbar:vc4.tabBarItem];
     [self setTabbar:vc5.tabBarItem];
     
-//    [vc3.tabBar setBarTintColor:[UIColor whiteColor];
-//    [vc3.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAutomatic];
-//    [vc4.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    [vc5.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    
 }
 /* 設定TabBar資料 */
 -(void)setTabbar:(UITabBarItem *)tabbarItem{
