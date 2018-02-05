@@ -10,4 +10,8 @@
 
 @interface ItemsViewController : UIViewController
 
+
+@property (strong , nonatomic) UITableView *ItemTableView;
+@property (strong , nonatomic) NSArray *contentArray;
+
 @end

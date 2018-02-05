@@ -10,4 +10,11 @@
 
 @interface WorldBossViewController : UIViewController
 
+
+@property (strong , nonatomic) UITableView *worldBossTableView;
+@property (strong , nonatomic) NSArray *contentArray;
+
+@property (nonatomic , assign) NSUInteger selectedIndex;
+
+
 @end

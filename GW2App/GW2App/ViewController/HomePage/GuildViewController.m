@@ -7,16 +7,22 @@
 //
 
 #import "GuildViewController.h"
-
+//Navigationtitle
+#import "ViewControllerNavigationController.h"
+//TabBar icon
+#import "GW2BroH_Tools.h"
 @interface GuildViewController ()
 
 @end
 
 @implementation GuildViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /* 顯示title */
+    [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexGuild];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -5,44 +5,106 @@
 //  Created by min_liu on 2018/1/18.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
+
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
 #import "ItemsViewController.h"
 #import "ViewControllerTabBar.h"
 
-@interface ItemsViewController ()
+#import "ItemsViewController+_TableView.h"
+//Navigationtitle
+#import "ViewControllerNavigationController.h"
 
+#import "ItemsTableViewCell.h"
+
+#import "WebsiteBase.h"
+typedef enum : int{
+    EnumItemIndex_1 = 0,
+    EnumItemIndex_2 = 1,
+    
+}EnumItemIndex;
+
+typedef enum : NSInteger{
+    EnumItemIndex_None       = 0,
+    EnumItemIndex_GoldToGems = 1,
+    EnumItemIndex_GemsToGold = 2,
+    
+}EnumItemsCange;
+@interface ItemsViewController ()
 @end
 
 @implementation ItemsViewController
 
+
+
+-(instancetype)init{
+    self = [super init];
+    if( self ){
+        [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
+        [self cofigureTableview];
+        [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexItems];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = VC_START_MENU_BACKGROUND_COLOR;
-    //self.navigationBar.backgroundColor = VC_NAVIGATION_BAR_COLOR;
+
+    /* 與網站連線 */
+    [[WebsiteBase sharedInstance] setHomeUrl:@"https://api.guildwars2.com/v2"];
+    /* ViewCell */
+    // 模擬取得資料
+    // 網路端假資料
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (int i = 0 ; i < 2; i++ ) {
+        ItemsModel *model = [[ItemsModel alloc] init];
+        model.bg = [self getCellImageWithIndex:i];
+        model.timetitle = [self getCellTimeLabelWithIndex:i];
+        model.sel = EnumItemIndex_None;
+        [array addObject:model];
+    }
     
-    self.title = @"拍賣場";
-    
-    /* 顯示label */
-    UILabel *myLabel = [[UILabel alloc] init];
-    CGRect labelFrame = CGRectMake(120.0f, 25.0f, 180.0f, 23.0f);
-    myLabel  = [[UILabel alloc]initWithFrame:labelFrame];
-    myLabel.text = @"page2";
-    myLabel.font = [UIFont boldSystemFontOfSize:14.0f];
-    [self.view addSubview:myLabel];
-    
-    UIImage *test = [GW2BroH_Tools getImageWithString:@"ViewControllerGuild" withImageName:@"bounty"];
-    UIImageView *imageview = [[UIImageView alloc] initWithImage:test];
-    imageview.center = CGPointMake(150, 300);
-    [self.view addSubview:imageview];
-    
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
-    button.center = self.view.center;
-    [button setTitle:@"test" forState:(UIControlStateNormal)];
-    [self.view addSubview:button];
-    [button addTarget:self action:@selector(pressedBtn:) forControlEvents:(UIControlEventTouchUpInside)];
+    // 觸發 TableView Reload
+    self.contentArray = array;
 }
+
+/* 取得BackgroundColor */
+-(UIImage *)getCellImageWithIndex:(NSUInteger)index{
+    
+    UIImage *tempBg = nil;
+    
+    switch (index) {
+        case EnumItemIndex_1:
+            tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"goldCell"];
+            break;
+        case EnumItemIndex_2:
+            tempBg = [GW2BroH_Tools getImageWithString:@"ViewControllerItems" withImageName:@"gemCell"];
+            break;
+        default:
+            NSLog(@"Error");
+            break;
+    }
+    return tempBg;
+}
+
+/* 取得BossTitle */
+-(NSString *)getCellTimeLabelWithIndex:(NSUInteger)index{
+    
+    NSString *title = @"";
+    
+    switch (index) {
+        case EnumItemIndex_1:
+        case EnumItemIndex_2:
+            title = @"time";
+            break;
+        default:
+            NSLog(@"Error");
+            break;
+    }
+    return title;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -52,6 +114,7 @@
 -(void)pressedBtn:(id)sender{
     [(ViewControllerTabBar *)self.tabBarController changeViewControllerWithIndex:EnumTabBarIndexStartMenu];
 }
+
 /*
 #pragma mark - Navigation
 

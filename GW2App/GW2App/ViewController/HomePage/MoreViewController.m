@@ -7,16 +7,22 @@
 //
 
 #import "MoreViewController.h"
-
+//Navigationtitle
+#import "ViewControllerNavigationController.h"
+//TabBar icon
+#import "GW2BroH_Tools.h"
 @interface MoreViewController ()
 
 @end
 
 @implementation MoreViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /* 顯示title */
+    [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexMore];
 }
 
 - (void)didReceiveMemoryWarning {
