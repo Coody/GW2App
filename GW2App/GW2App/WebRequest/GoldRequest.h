@@ -21,6 +21,5 @@
 
 /* 設定Gold數量 */
 -(void)setGolds:(NSInteger)golds;
-/* 返回轉換Gem */
--(NSInteger)resdCoinPreGem;
+
 @end

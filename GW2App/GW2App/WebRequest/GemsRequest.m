@@ -18,7 +18,6 @@
 
 @interface GemsRequest()
 @property (nonatomic, assign) NSInteger gems;
-@property (nonatomic, assign) NSInteger coin;
 @end
 
 @implementation GemsRequest
@@ -52,16 +51,10 @@
     NSError *error = nil;
     GemsRequestModel *model = [[GemsRequestModel alloc] initWithDictionary:responseObject
                                                                      error:&error];
-    /* 轉換值保留下來 */
-    _coin = [model.coins_per_gem integerValue];
+
     return model;
 }
 
-/* 返回轉換Gem */
--(NSInteger)resdGemPreCoin{
-    
-    return _coin;
-}
 -(void)setGems:(NSInteger)gems{
     _gems = gems;
 }

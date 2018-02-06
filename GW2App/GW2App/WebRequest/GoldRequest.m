@@ -8,8 +8,6 @@
 
 #import "GoldRequest.h"
 
-/* 更新readlabel */
-#import "ItemsTableViewCell.h"
 
 //https://wiki.guildwars2.com/wiki/API:2/commerce/exchange/coins
 /* 建置一個空Model的實作 */
@@ -18,7 +16,6 @@
 
 @interface GoldRequest()
 @property (nonatomic, assign) NSInteger gold;
-@property (nonatomic, assign) NSInteger gems;
 @end
 
 @implementation GoldRequest
@@ -52,8 +49,6 @@
     NSError *error = nil;
     GoldRequestModel *model = [[GoldRequestModel alloc] initWithDictionary:responseObject
                                                                      error:&error];
-    /* 轉換值保留下來 */
-    _gems =[model.coins_per_gem integerValue];
     
     return model;
 }
@@ -64,10 +59,5 @@
     self.gold = golds;
 }
 
-/* 返回轉換Gem */
--(NSInteger)resdCoinPreGem{
-    
-    return _gems;
-}
 
 @end

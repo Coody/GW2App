@@ -10,12 +10,13 @@
 #import "ItemsTableViewCell.h"
 
 #import "ItemsViewController.h"
-#import "Constants.h"
 
+#import "Constants.h"
 //web gold轉換
 #import "GoldRequest.h"
 #import "GemsRequest.h"
 
+static char ACTIVITY_INDICATOR_KEY;
 
 typedef enum : NSInteger{
     EnumItemIndex_None       = 0,
@@ -36,13 +37,19 @@ typedef enum : NSInteger{
 
 @property (nonatomic , strong) GoldRequest *goldRequest;
 @property (nonatomic , strong) GemsRequest *gemRequest;
-
-
-@property (nonatomic, strong) UIActivityIndicatorView *loadingView;
 @end
 
 
 @implementation ItemsTableViewCell
+/* 回傳目前LoadingView狀態 */
+- (UIActivityIndicatorView *)loadingView {
+    return objc_getAssociatedObject(self, &ACTIVITY_INDICATOR_KEY);
+}
+
+/* 設定LoadingView狀態 */
+- (void)setLoadingView:(UIActivityIndicatorView *)loadingView {
+    objc_setAssociatedObject(self, &ACTIVITY_INDICATOR_KEY, loadingView, OBJC_ASSOCIATION_RETAIN);
+}
 
 
 /*  覆寫自定TableViewCell */
@@ -87,9 +94,7 @@ typedef enum : NSInteger{
     _goldRequest = [[GoldRequest alloc] initWithSuccessBlock:^(NSError *error, id result) {
         __strong __typeof(weakSelf) strongSelf = weakSelf;
         
-        GoldRequestModel *goldModel = (GoldRequestModel *)result;
-        _readLabel.text = [NSString stringWithFormat:@"%@", goldModel.coins_per_gem];
-        
+        _readLabel.text = [NSString stringWithFormat:@"%ld", (long)_goldRequest.resdCoinPreGem];
         /* LoadingEnd */
         [strongSelf removeLoading];
         
@@ -100,9 +105,8 @@ typedef enum : NSInteger{
     _gemRequest = [[GemsRequest alloc] initWithSuccessBlock:^(NSError *error, id result) {
         __strong __typeof(weakSelf) strongSelf = weakSelf;
         
+        _readLabel.text = [NSString stringWithFormat:@"%ld", (long)_gemRequest.resdGemPreCoin];
         
-        GemsRequestModel *gemModel = (GemsRequestModel *)result;
-        _readLabel.text = [NSString stringWithFormat:@"%@", gemModel.coins_per_gem];
         /* LoadingEnd */
         [strongSelf removeLoading];
         
