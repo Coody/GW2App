@@ -150,7 +150,6 @@
 			children = (
 				13734151202943A400A6AE3B /* MoreViewController.h */,
 				13734152202943A400A6AE3B /* MoreViewController.m */,
-				1373413F202942BD00A6AE3B /* Item */,
 			);
 			name = More;
 			path = HomePage;
@@ -181,6 +180,7 @@
 				13734141202942E100A6AE3B /* ItemsTableViewCell.m */,
 			);
 			name = Item;
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		13734149202942F200A6AE3B /* Dungeons */ = {
@@ -283,6 +283,7 @@
 			children = (
 				1373414D2029435400A6AE3B /* Guild */,
 				13734149202942F200A6AE3B /* Dungeons */,
+				1373413F202942BD00A6AE3B /* Item */,
 				137341352029428E00A6AE3B /* WorldBoss */,
 				1373412F2029413500A6AE3B /* More */,
 				13A16205200890C800C84C6B /* HomePage */,
