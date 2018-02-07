@@ -25,6 +25,7 @@
 		13C53D0A2008AB6E0081EBD7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D092008AB6E0081EBD7 /* MainViewController.m */; };
 		13C53D132008B6E80081EBD7 /* ViewControllerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D122008B6E80081EBD7 /* ViewControllerNavigationController.m */; };
 		13C53D162008BBCD0081EBD7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C53D152008BBCD0081EBD7 /* LoginViewController.m */; };
+		13E12549202ACA1400F5BEB0 /* AppDelegate+Websites.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E12548202ACA1400F5BEB0 /* AppDelegate+Websites.m */; };
 		5AEA64EA20085DBF00758098 /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = 5AEA64E920085DBF00758098 /* Datas */; };
 		5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */; };
 		5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA64F220085DD600758098 /* GW2BroH_Tools.m */; };
@@ -90,6 +91,8 @@
 		13C53D122008B6E80081EBD7 /* ViewControllerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerNavigationController.m; sourceTree = "<group>"; };
 		13C53D142008BBCD0081EBD7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		13C53D152008BBCD0081EBD7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		13E12547202ACA1400F5BEB0 /* AppDelegate+Websites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Websites.h"; sourceTree = "<group>"; };
+		13E12548202ACA1400F5BEB0 /* AppDelegate+Websites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Websites.m"; sourceTree = "<group>"; };
 		54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.release.xcconfig"; sourceTree = "<group>"; };
 		5AEA64E920085DBF00758098 /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Datas; sourceTree = "<group>"; };
 		5AEA64EC20085DD600758098 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTabBar.h; sourceTree = "<group>"; };
@@ -324,6 +327,8 @@
 			children = (
 				5AEA64F720085E1B00758098 /* AppDelegate.h */,
 				5AEA64F820085E1B00758098 /* AppDelegate.m */,
+				13E12547202ACA1400F5BEB0 /* AppDelegate+Websites.h */,
+				13E12548202ACA1400F5BEB0 /* AppDelegate+Websites.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 				5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */,
 				1343959020285FE100AB8A01 /* GemsRequest.m in Sources */,
 				1373414C2029433600A6AE3B /* DungeonsViewController.m in Sources */,
+				13E12549202ACA1400F5BEB0 /* AppDelegate+Websites.m in Sources */,
 				1343959120285FE100AB8A01 /* GoldRequest.m in Sources */,
 				1373413E202942B500A6AE3B /* WorldBossViewController+TableView.m in Sources */,
 				13C53D162008BBCD0081EBD7 /* LoginViewController.m in Sources */,
