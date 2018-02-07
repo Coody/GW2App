@@ -229,6 +229,7 @@
 				1343958B20285FE100AB8A01 /* WebRequest */,
 				5AEA64E920085DBF00758098 /* Datas */,
 				5AEA64F620085E1B00758098 /* AppDelegate */,
+				5AEA64EB20085DD600758098 /* ViewController */,
 				5AEA64F320085DD700758098 /* Submodule */,
 				5AEA64EE20085DD600758098 /* ThirdParty */,
 				5AEA64EF20085DD600758098 /* Tools */,
@@ -290,8 +291,7 @@
 				5AEA64EC20085DD600758098 /* ViewControllerTabBar.h */,
 				5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */,
 			);
-			name = ViewController;
-			path = ../ViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		5AEA64EE20085DD600758098 /* ThirdParty */ = {
@@ -305,7 +305,6 @@
 			isa = PBXGroup;
 			children = (
 				5AEA64F020085DD600758098 /* Constants.h */,
-				5AEA64EB20085DD600758098 /* ViewController */,
 				5AEA64F220085DD600758098 /* GW2BroH_Tools.m */,
 				5AEA64F120085DD600758098 /* GW2BroH_Tools.h */,
 			);
