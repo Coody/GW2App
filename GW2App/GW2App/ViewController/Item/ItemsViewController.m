@@ -51,7 +51,8 @@ typedef enum : NSInteger{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    
+    /* 與網站連線 */
+    [[WebsiteBase sharedInstance] setHomeUrl:@"https://api.guildwars2.com/v2"];
     /* ViewCell */
     // 模擬取得資料
     // 網路端假資料

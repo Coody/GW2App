@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Constants.h"
 @interface ViewControllerNavigationController : UINavigationController
 
 /**
@@ -18,6 +18,6 @@
  * @param firstViewController : 塞入第一個畫面（必須繼承 UIViewController ）的實體
  */
 -(instancetype)initWithFirstViewcontroller:(UIViewController *)firstViewController;
-
+-(void) setNavigationBarTiteleUse:(EnumTabBarIndex)index;
 @end
 

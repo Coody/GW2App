@@ -1,22 +1,28 @@
 //
-//  DungeonsViewController.m
+//  MoreViewController.m
 //  GW2App
 //
 //  Created by min_liu on 2018/1/18.
 //  Copyright © 2018年 min_liu. All rights reserved.
 //
 
-#import "DungeonsViewController.h"
-
-@interface DungeonsViewController ()
+#import "MoreViewController.h"
+//Navigationtitle
+#import "ViewControllerNavigationController.h"
+//TabBar icon
+#import "GW2BroH_Tools.h"
+@interface MoreViewController ()
 
 @end
 
-@implementation DungeonsViewController
+@implementation MoreViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /* 顯示title */
+    [(ViewControllerNavigationController*) self.navigationController setNavigationBarTiteleUse: EnumTabBarIndexMore];
 }
 
 - (void)didReceiveMemoryWarning {
