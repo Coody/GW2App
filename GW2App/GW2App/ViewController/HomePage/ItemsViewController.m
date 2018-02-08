@@ -18,6 +18,7 @@
 #import "ItemsTableViewCell.h"
 
 #import "WebsiteBase.h"
+
 typedef enum : int{
     EnumItemIndex_1 = 0,
     EnumItemIndex_2 = 1,
@@ -51,7 +52,6 @@ typedef enum : NSInteger{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    
     /* ViewCell */
     // 模擬取得資料
     // 網路端假資料

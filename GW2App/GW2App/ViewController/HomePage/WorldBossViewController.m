@@ -53,7 +53,6 @@ typedef enum : int{
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     /* ViewCell */
     // 模擬取得資料
     // 網路端假資料

@@ -115,10 +115,11 @@
     
     /* TabBar顯示未選中 Icon */
     [self.tabBar setUnselectedItemTintColor:[UIColor grayColor]];
-    
+    tabbarItem.badgeColor = [UIColor redColor];
+//    tabbarItem.image.c
     /* TabBar顯示選中 Icon */ //????
 //    [self.tabBar setBarTintColor:[UIColor whiteColor]];
-//    [self.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    [tabbarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
 }
 
