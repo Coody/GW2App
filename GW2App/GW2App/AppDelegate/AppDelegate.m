@@ -13,6 +13,8 @@
 
 //web link
 #import "AppDelegate+Websites.h"
+//itemModel
+#import "AppDelegate+Model.h"
 @interface AppDelegate ()
 
 @end
@@ -30,6 +32,8 @@
     [self initWithViewControl];
     
     [self setWebRequestUrl];
+    
+    [self initialModel];
     return YES;
 }
 

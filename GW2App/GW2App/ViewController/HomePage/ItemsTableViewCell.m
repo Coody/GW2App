@@ -16,19 +16,65 @@
 #import "GoldRequest.h"
 #import "GemsRequest.h"
 
+// for Tools
+#import "ModelKey.h"
+#import "ModelManager.h"
+#import "ItemModel.h"
 
-typedef enum : NSInteger{
-    EnumItemIndex_None       = 0,
-    EnumItemIndex_GoldToGems = 1,
-    EnumItemIndex_GemsToGold = 2,
-    
-}EnumItemsCange;
 
 @implementation ItemsModel
+@synthesize recentDate = _recentDate;
+@synthesize recentGems = _recentGems;
+@synthesize recentGemsToGold = _recentGemsToGold;
+
+
+-(void)setRecentDate:(NSDate *)recentDate{
+    if( recentDate != nil ){
+        _recentDate = recentDate;
+        ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_KEY];
+        itemModel.gemsDate = _recentDate;
+    }
+}
+
+-(NSDate *)recentDate{
+    ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_KEY];
+    _recentDate = itemModel.gemsDate;
+    return _recentDate;
+}
+
+-(void)setRecentGems:(NSNumber *)recentGems{
+    if( recentGems != nil ){
+        _recentGems = recentGems;
+        ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_GEMS_KEY];
+        itemModel.gems = _recentGems;
+    }
+}
+
+-(NSNumber *)recentGems{
+    ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_GEMS_KEY];
+    _recentGems = itemModel.gems;
+    return _recentGems;
+}
+
+-(void)recentGemsToGold:(NSNumber *)recentGemsToGold{
+    if( recentGemsToGold != nil ){
+        _recentGemsToGold = recentGemsToGold;
+        ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_GEMS_TO_GOLD_KEY];
+        itemModel.gemsToGold = _recentGemsToGold;
+    }
+}
+
+-(NSNumber *)recentGemsToGold{
+    ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_GEMS_TO_GOLD_KEY];
+    _recentGemsToGold = itemModel.gemsToGold;
+    return _recentGemsToGold;
+}
 @end
 
 
 @interface ItemsTableViewCell()
+@property (nonatomic , assign) EnumItemsCange cellType;
+@property (nonatomic , strong) ItemsModel *model;
 @property (nonatomic , strong) UIImageView *bgImageView;
 @property (nonatomic , strong) UILabel *TimeLabel;
 @property (nonatomic , strong) UITextView *setTextView;
@@ -68,17 +114,15 @@ typedef enum : NSInteger{
     // Configure the view for the selected state
 }
 
--(void)setupCell:(ItemsModel *)model{
+-(void)setupItemCell:(ItemsModel *)model{
+    
+    _model = model;
     
     //時間顯示
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    NSDate *date = [NSDate date];
-    //正規化的格式設定
-    [formatter setDateFormat:@"YYYY/MM/dd HH:mm:ss"];
-    //正規化取得的系統時間並顯示
-    NSLog(@"更新時間: %@", [formatter stringFromDate:date]);
+    [self setDate:model.recentDate];
+//    [self setGems:model.recentGems];
+//    [self setGemsToGold:model.recentGemsToGold];
     
-    model.timetitle = [NSString stringWithFormat:@"更新時間 %@",[formatter stringFromDate:date]];
     [self setupCellWithItemsImage:model.bg
                         withTitle:model.timetitle
                           withSel:model.sel];
@@ -88,12 +132,19 @@ typedef enum : NSInteger{
         __strong __typeof(weakSelf) strongSelf = weakSelf;
         
         GoldRequestModel *goldModel = (GoldRequestModel *)result;
-        _readLabel.text = [NSString stringWithFormat:@"%@", goldModel.coins_per_gem];
+        strongSelf.readLabel.text = [NSString stringWithFormat:@"%@", goldModel.coins_per_gem];
+        
+        [strongSelf setDate:[NSDate date]];
+//        [strongSelf setGems:()[_setTextView.text integerValue]];
+//        [strongSelf setGemsToGold:[NSDate date]];
         
         /* LoadingEnd */
         [strongSelf removeLoading];
         
     } withFailBlock:^(NSError *error, NSNumber *errorCode, NSString *errorMsg) {
+        __strong __typeof(weakSelf) strongSelf = weakSelf;
+        /* LoadingEnd */
+        [strongSelf removeLoading];
     }];
     
     //取得gems
@@ -103,6 +154,9 @@ typedef enum : NSInteger{
         
         GemsRequestModel *gemModel = (GemsRequestModel *)result;
         _readLabel.text = [NSString stringWithFormat:@"%@", gemModel.coins_per_gem];
+        
+        [strongSelf setDate:[NSDate date]];
+        
         /* LoadingEnd */
         [strongSelf removeLoading];
         
@@ -134,6 +188,45 @@ typedef enum : NSInteger{
     }
 }
 
+-(void)setDate:(NSDate *)recentDate{
+    NSString *formatDate;
+    if( recentDate == nil ){
+        formatDate = @"?";
+    }
+    else{
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        
+        // 正規化的格式設定
+        [formatter setDateFormat:@"YYYY/MM/dd HH:mm:ss"];
+        
+        // 正規化取得的系統時間並顯示
+        formatDate = [formatter stringFromDate:recentDate];
+        
+        NSLog(@"更新時間: %@", formatDate);
+        
+        _model.recentDate = recentDate;
+    }
+    _model.timetitle = [NSString stringWithFormat:@"更新時間: %@" , formatDate ];
+}
+
+-(void)setGems:(NSNumber *)recentGems{
+    
+    _setTextView.text = @"?";
+    if(recentGems != nil)
+    {
+        _model.recentGems = recentGems;
+    }
+}
+
+-(void)setGemsToGold:(NSNumber *)recentGemsToGold{
+    
+    _readLabel.text = @"?";
+    if(recentGemsToGold != nil)
+    {
+        _model.recentGemsToGold = recentGemsToGold;
+    }
+}
+
 -(void)setupCellWithItemsImage:(UIImage *)bgImage
                      withTitle:(NSString *)title
                        withSel:(NSInteger)sel{
@@ -148,7 +241,7 @@ typedef enum : NSInteger{
     
     //Label
     if(_TimeLabel == nil){
-        _TimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 5.0f, 180.0f, 15.0f)];
+        _TimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 5.0f, 220.0f, 15.0f)];
         _TimeLabel.font = [UIFont boldSystemFontOfSize:12.0f];
         [_TimeLabel setTextColor: [UIColor whiteColor]];
         [self addSubview:_TimeLabel];

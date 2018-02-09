@@ -13,6 +13,7 @@
 // for Constant
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
+
 static NSString *const cellIdentifier = @"cellItem";
 
 
@@ -48,7 +49,7 @@ static NSString *const cellIdentifier = @"cellItem";
         cell = [[ItemsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    [cell setupCell:[self.contentArray objectAtIndex:indexPath.row]];
+    [cell setupItemCell:[self.contentArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
@@ -86,9 +87,8 @@ static NSString *const cellIdentifier = @"cellItem";
         [cell showLoading];
     
         model.sel = indexPath.row + 1;
-        [cell setupCell:model];
+        [cell setupItemCell:model];
     }
 }
-
 
 @end

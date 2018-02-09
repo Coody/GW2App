@@ -14,7 +14,6 @@
 // for Constant
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
-
 @implementation WorldBossViewController (TableView)
 /* 初始化 */
 -(void)cofigureTableview
@@ -43,7 +42,8 @@
         cell = [[WorldBossTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
        
     }
-    [cell setupCell:[self.contentArray objectAtIndex:indexPath.row]];
+    WorldBossModel *model = [self.contentArray objectAtIndex:indexPath.row];
+    [cell setupCell:[self.contentArray objectAtIndex:indexPath.row]:indexPath:model.isSelected];
     return cell;
 }
 

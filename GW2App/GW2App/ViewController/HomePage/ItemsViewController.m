@@ -25,12 +25,6 @@ typedef enum : int{
     
 }EnumItemIndex;
 
-typedef enum : NSInteger{
-    EnumItemIndex_None       = 0,
-    EnumItemIndex_GoldToGems = 1,
-    EnumItemIndex_GemsToGold = 2,
-    
-}EnumItemsCange;
 @interface ItemsViewController ()
 @end
 

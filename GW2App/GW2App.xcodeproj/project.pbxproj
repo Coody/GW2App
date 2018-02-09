@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1328ED94202D713600E07D9F /* worldBoss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1328ED93202D713600E07D9F /* worldBoss.plist */; };
+		1328ED97202D730000E07D9F /* WorldBossViewController+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 1328ED96202D730000E07D9F /* WorldBossViewController+Data.m */; };
+		1328ED9A202D779D00E07D9F /* WorldBossModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1328ED99202D779D00E07D9F /* WorldBossModel.m */; };
 		1343959020285FE100AB8A01 /* GemsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1343958D20285FE100AB8A01 /* GemsRequest.m */; };
 		1343959120285FE100AB8A01 /* GoldRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1343958F20285FE100AB8A01 /* GoldRequest.m */; };
+		1353BC38202C21B80037F300 /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1353BC37202C21B80037F300 /* ModelManager.m */; };
+		1353BC3F202C25630037F300 /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1353BC3E202C25630037F300 /* ItemModel.m */; };
+		136732FB202C2CE2004CC5BC /* AppDelegate+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 136732FA202C2CE2004CC5BC /* AppDelegate+Model.m */; };
 		1373413C202942B500A6AE3B /* WorldBossTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13734137202942B500A6AE3B /* WorldBossTableViewCell.m */; };
 		1373413D202942B500A6AE3B /* WorldBossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13734139202942B500A6AE3B /* WorldBossViewController.m */; };
 		1373413E202942B500A6AE3B /* WorldBossViewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373413B202942B500A6AE3B /* WorldBossViewController+TableView.m */; };
@@ -53,10 +59,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1328ED93202D713600E07D9F /* worldBoss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = worldBoss.plist; sourceTree = "<group>"; };
+		1328ED95202D730000E07D9F /* WorldBossViewController+Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WorldBossViewController+Data.h"; sourceTree = "<group>"; };
+		1328ED96202D730000E07D9F /* WorldBossViewController+Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WorldBossViewController+Data.m"; sourceTree = "<group>"; };
+		1328ED98202D779D00E07D9F /* WorldBossModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldBossModel.h; sourceTree = "<group>"; };
+		1328ED99202D779D00E07D9F /* WorldBossModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldBossModel.m; sourceTree = "<group>"; };
 		1343958C20285FE100AB8A01 /* GemsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GemsRequest.h; sourceTree = "<group>"; };
 		1343958D20285FE100AB8A01 /* GemsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GemsRequest.m; sourceTree = "<group>"; };
 		1343958E20285FE100AB8A01 /* GoldRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldRequest.h; sourceTree = "<group>"; };
 		1343958F20285FE100AB8A01 /* GoldRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldRequest.m; sourceTree = "<group>"; };
+		1353BC36202C21B80037F300 /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
+		1353BC37202C21B80037F300 /* ModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManager.m; sourceTree = "<group>"; };
+		1353BC3A202C247D0037F300 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1353BC3B202C24A70037F300 /* ModelKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelKey.h; sourceTree = "<group>"; };
+		1353BC3D202C25630037F300 /* ItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
+		1353BC3E202C25630037F300 /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
+		136732F9202C2CE2004CC5BC /* AppDelegate+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Model.h"; sourceTree = "<group>"; };
+		136732FA202C2CE2004CC5BC /* AppDelegate+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Model.m"; sourceTree = "<group>"; };
 		13734136202942B500A6AE3B /* WorldBossTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldBossTableViewCell.h; sourceTree = "<group>"; };
 		13734137202942B500A6AE3B /* WorldBossTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldBossTableViewCell.m; sourceTree = "<group>"; };
 		13734138202942B500A6AE3B /* WorldBossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldBossViewController.h; sourceTree = "<group>"; };
@@ -97,7 +116,6 @@
 		5AEA64E920085DBF00758098 /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Datas; sourceTree = "<group>"; };
 		5AEA64EC20085DD600758098 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTabBar.h; sourceTree = "<group>"; };
 		5AEA64ED20085DD600758098 /* ViewControllerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTabBar.m; sourceTree = "<group>"; };
-		5AEA64F020085DD600758098 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5AEA64F120085DD600758098 /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
 		5AEA64F220085DD600758098 /* GW2BroH_Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2BroH_Tools.m; sourceTree = "<group>"; };
 		5AEA64F720085E1B00758098 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +166,24 @@
 			path = WebRequest;
 			sourceTree = "<group>";
 		};
+		1353BC39202C247D0037F300 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				1353BC3B202C24A70037F300 /* ModelKey.h */,
+				1353BC3A202C247D0037F300 /* Constants.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		1353BC3C202C25410037F300 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1353BC3D202C25630037F300 /* ItemModel.h */,
+				1353BC3E202C25630037F300 /* ItemModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1373412F2029413500A6AE3B /* More */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,12 +197,17 @@
 		137341352029428E00A6AE3B /* WorldBoss */ = {
 			isa = PBXGroup;
 			children = (
+				1328ED98202D779D00E07D9F /* WorldBossModel.h */,
+				1328ED99202D779D00E07D9F /* WorldBossModel.m */,
 				13734136202942B500A6AE3B /* WorldBossTableViewCell.h */,
 				13734137202942B500A6AE3B /* WorldBossTableViewCell.m */,
 				13734138202942B500A6AE3B /* WorldBossViewController.h */,
 				13734139202942B500A6AE3B /* WorldBossViewController.m */,
 				1373413A202942B500A6AE3B /* WorldBossViewController+TableView.h */,
 				1373413B202942B500A6AE3B /* WorldBossViewController+TableView.m */,
+				1328ED95202D730000E07D9F /* WorldBossViewController+Data.h */,
+				1328ED96202D730000E07D9F /* WorldBossViewController+Data.m */,
+				1328ED93202D713600E07D9F /* worldBoss.plist */,
 			);
 			name = WorldBoss;
 			path = HomePage;
@@ -229,13 +270,15 @@
 		139197AD200742FF00D2638C /* GW2App */ = {
 			isa = PBXGroup;
 			children = (
-				1343958B20285FE100AB8A01 /* WebRequest */,
 				5AEA64E920085DBF00758098 /* Datas */,
 				5AEA64F620085E1B00758098 /* AppDelegate */,
 				5AEA64EB20085DD600758098 /* ViewController */,
 				5AEA64F320085DD700758098 /* Submodule */,
 				5AEA64EE20085DD600758098 /* ThirdParty */,
 				5AEA64EF20085DD600758098 /* Tools */,
+				1353BC39202C247D0037F300 /* Constant */,
+				1343958B20285FE100AB8A01 /* WebRequest */,
+				1353BC3C202C25410037F300 /* Model */,
 				139197BA200742FF00D2638C /* Assets.xcassets */,
 				139197BF200742FF00D2638C /* Info.plist */,
 				139197AE200742FF00D2638C /* Supporting Files */,
@@ -307,7 +350,8 @@
 		5AEA64EF20085DD600758098 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				5AEA64F020085DD600758098 /* Constants.h */,
+				1353BC36202C21B80037F300 /* ModelManager.h */,
+				1353BC37202C21B80037F300 /* ModelManager.m */,
 				5AEA64F220085DD600758098 /* GW2BroH_Tools.m */,
 				5AEA64F120085DD600758098 /* GW2BroH_Tools.h */,
 			);
@@ -329,6 +373,8 @@
 				5AEA64F820085E1B00758098 /* AppDelegate.m */,
 				13E12547202ACA1400F5BEB0 /* AppDelegate+Websites.h */,
 				13E12548202ACA1400F5BEB0 /* AppDelegate+Websites.m */,
+				136732F9202C2CE2004CC5BC /* AppDelegate+Model.h */,
+				136732FA202C2CE2004CC5BC /* AppDelegate+Model.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -474,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				139197BB200742FF00D2638C /* Assets.xcassets in Resources */,
+				1328ED94202D713600E07D9F /* worldBoss.plist in Resources */,
 				5AEA64EA20085DBF00758098 /* Datas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,22 +602,27 @@
 				13C53D132008B6E80081EBD7 /* ViewControllerNavigationController.m in Sources */,
 				5AEA650120085EC300758098 /* WebsiteBase.m in Sources */,
 				13734148202942E100A6AE3B /* ItemsViewController+_TableView.m in Sources */,
+				1328ED9A202D779D00E07D9F /* WorldBossModel.m in Sources */,
 				13734146202942E100A6AE3B /* ItemsTableViewCell.m in Sources */,
 				1373413C202942B500A6AE3B /* WorldBossTableViewCell.m in Sources */,
+				1353BC3F202C25630037F300 /* ItemModel.m in Sources */,
 				5AEA64F420085DD700758098 /* ViewControllerTabBar.m in Sources */,
 				137341502029436F00A6AE3B /* GuildViewController.m in Sources */,
 				13734153202943A400A6AE3B /* MoreViewController.m in Sources */,
 				13734147202942E100A6AE3B /* ItemsViewController.m in Sources */,
 				13C53D0A2008AB6E0081EBD7 /* MainViewController.m in Sources */,
 				5AEA64F520085DD700758098 /* GW2BroH_Tools.m in Sources */,
+				136732FB202C2CE2004CC5BC /* AppDelegate+Model.m in Sources */,
 				1343959020285FE100AB8A01 /* GemsRequest.m in Sources */,
 				1373414C2029433600A6AE3B /* DungeonsViewController.m in Sources */,
 				13E12549202ACA1400F5BEB0 /* AppDelegate+Websites.m in Sources */,
 				1343959120285FE100AB8A01 /* GoldRequest.m in Sources */,
+				1328ED97202D730000E07D9F /* WorldBossViewController+Data.m in Sources */,
 				1373413E202942B500A6AE3B /* WorldBossViewController+TableView.m in Sources */,
 				13C53D162008BBCD0081EBD7 /* LoginViewController.m in Sources */,
 				1373413D202942B500A6AE3B /* WorldBossViewController.m in Sources */,
 				139197B0200742FF00D2638C /* main.m in Sources */,
+				1353BC38202C21B80037F300 /* ModelManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

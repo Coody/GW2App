@@ -9,9 +9,6 @@
 #import "WorldBossViewController.h"
 
 
-
-
-
 @interface WorldBossViewController (TableView) <UITableViewDelegate ,UITableViewDataSource>
 
 -(void)cofigureTableview;

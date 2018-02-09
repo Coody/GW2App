@@ -7,18 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WorldBossModel.h"
 
 extern float const kWorldBossTableViewCellHight;
 extern float const kWorldBossTableViewCellSelectedHight;
 extern NSString *const cellIdentifier;
-
-@interface WorldBossModel : NSObject
-@property (nonatomic , assign) BOOL isSelected;
-@property (nonatomic , strong) UIImage *bg;
-@property (nonatomic , strong) UIImage *bossImage;
-@property (nonatomic , strong) NSString *title;
-@end
-
 
 @interface WorldBossTableViewCell : UITableViewCell
 
@@ -27,14 +20,22 @@ extern NSString *const cellIdentifier;
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
-
-
--(void)setupCell:(WorldBossModel *)model;
+-(void)setupCell:(WorldBossModel *)model
+                :(NSIndexPath *)index
+                :(BOOL)bSel;
 
 /* 貼上cell資料 */
--(void)setupCellWithBgImage:(UIImage *)bgImage
-              withBossImage:(UIImage *)bossImage
-                  withTitle:(NSString *)title
-                  withIndex:(BOOL) bSel;
+//-(void)setupCellWithBgImage:(UIImage *)bgImage
+//              withBossImage:(UIImage *)bossImage
+//                  withTitle:(NSString *)title
+//                  withIndex:(BOOL) bSel;
+
+/* 貼上cell資料 */
+-(void)setupCellWithTime:(NSDate *)time
+       withBossImagePath:(NSString *)bossImageName
+           withTitlePath:(NSString *)title
+         withContextPath:(NSString *)context
+                SelIndex:(NSIndexPath *)index
+               withIndex:(bool)bSel;
 
 @end
