@@ -28,8 +28,9 @@ typedef enum : int{
 @interface ItemsViewController ()
 @end
 
-@implementation ItemsViewController
 
+
+@implementation ItemsViewController
 
 
 -(instancetype)init{
@@ -60,6 +61,8 @@ typedef enum : int{
     
     // 觸發 TableView Reload
     self.contentArray = array;
+    
+
 }
 
 /* 取得BackgroundColor */

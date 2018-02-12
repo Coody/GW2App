@@ -163,7 +163,7 @@
     
     switch(model.sel){
         case EnumItemIndex_GoldToGems:
-            if([_setTextView.text integerValue] < 10000){
+            if([_setTextView.text integerValue] <= 10000){
                 _setTextView.text = @"10000";
             }
             
@@ -171,7 +171,7 @@
             [_goldRequest send];
             break;
         case EnumItemIndex_GemsToGold:
-            if([_setTextView.text integerValue] < 10){
+            if([_setTextView.text integerValue] <= 10){
                 _setTextView.text = @"10";
             }
 
