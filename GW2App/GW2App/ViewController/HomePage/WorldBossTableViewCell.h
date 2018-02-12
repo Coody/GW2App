@@ -20,6 +20,7 @@ extern NSString *const cellIdentifier;
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
+// FIXME: 方法名稱不要這樣寫，沒有人會知道你要傳送什麼進去
 -(void)setupCell:(WorldBossModel *)model
                 :(NSIndexPath *)index
                 :(BOOL)bSel;

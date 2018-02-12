@@ -68,7 +68,7 @@ static NSString *const cellIdentifier = @"cellItem";
 /* cell 高 */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    // FIXME: 這裡改成 TableViewCell 那裡定義就好，不要寫成常數
     return 114.0f;
 }
 

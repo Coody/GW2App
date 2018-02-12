@@ -76,6 +76,7 @@
 @property (nonatomic , assign) EnumItemsCange cellType;
 @property (nonatomic , strong) ItemsModel *model;
 @property (nonatomic , strong) UIImageView *bgImageView;
+// FIXME: 類別內的成員變數第一個字母盡量不要大寫
 @property (nonatomic , strong) UILabel *TimeLabel;
 @property (nonatomic , strong) UITextView *setTextView;
 @property (nonatomic , strong) UILabel *readLabel;
@@ -124,6 +125,8 @@
     [self setupCellWithItemsImage:model.bg
                         withTitle:model.timetitle
                           withSel:model.sel];
+    
+    // FIXME: request 應該拿出去外面做，不應該在裡面實作了。（且滑動很快，這個 cell 如果有 reuse 則會不斷發出 request）
     //取得gold
     __weak __typeof(self)weakSelf = self;
     _goldRequest = [[GoldRequest alloc] initWithSuccessBlock:^(NSError *error, id result) {

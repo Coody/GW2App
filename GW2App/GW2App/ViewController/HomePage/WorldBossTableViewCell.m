@@ -76,6 +76,7 @@ NSString *const cellIdentifier = @"cellIdentifier";
         [self addSubview:_bgImageView];
     }
     
+    // FIXME: 這裡會不斷產生新的 UIImage ，會導致效能不好，Cell 的 reuse 機制被破壞了。
     UIImage *bgImage = nil;
     if(index.row){
         bgImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
@@ -94,6 +95,8 @@ NSString *const cellIdentifier = @"cellIdentifier";
                                                                        _bgImageView.frame.size.height *0.6)];
         [_bgImageView addSubview:_bossImageView];
     }
+    
+    // FIXME: 這裡一樣，UIImage 會一直重新產生。
     UIImage *bossImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:bossImageName];
     [_bossImageView setImage:bossImage];
     
@@ -177,6 +180,7 @@ NSString *const cellIdentifier = @"cellIdentifier";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellSelectedHight)];
+            // FIXME: 這裡用了 self 會造成記憶體遺漏（在 block 內）
             /* 調整cell大小 */
             [strongSelf setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
             
@@ -191,6 +195,7 @@ NSString *const cellIdentifier = @"cellIdentifier";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellHight)];
+            // FIXME: 同上，記憶體遺漏
             /* 調整cell大小 */
             [strongSelf setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
         }];
