@@ -20,15 +20,10 @@ extern NSString *const cellIdentifier;
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
--(void)setupCell:(WorldBossModel *)model
-                :(NSIndexPath *)index
-                :(BOOL)bSel;
-
-/* 貼上cell資料 */
-//-(void)setupCellWithBgImage:(UIImage *)bgImage
-//              withBossImage:(UIImage *)bossImage
-//                  withTitle:(NSString *)title
-//                  withIndex:(BOOL) bSel;
+/* 更新cell資料 */
+-(void)setupCellwithModel:(WorldBossModel *)model
+             withSelIndex:(NSIndexPath *)index
+                withIndex:(BOOL)bSel;
 
 /* 貼上cell資料 */
 -(void)setupCellWithTime:(NSDate *)time

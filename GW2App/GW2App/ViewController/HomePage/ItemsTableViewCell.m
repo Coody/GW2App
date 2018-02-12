@@ -76,7 +76,8 @@
 @property (nonatomic , assign) EnumItemsCange cellType;
 @property (nonatomic , strong) ItemsModel *model;
 @property (nonatomic , strong) UIImageView *bgImageView;
-@property (nonatomic , strong) UILabel *TimeLabel;
+
+@property (nonatomic , strong) UILabel *timeLabel;
 @property (nonatomic , strong) UITextView *setTextView;
 @property (nonatomic , strong) UILabel *readLabel;
 
@@ -114,16 +115,8 @@
     // Configure the view for the selected state
 }
 
--(void)setupItemCell:(ItemsModel *)model{
-    
-    _model = model;
-    
-    //時間顯示
-    [self setDate:model.recentDate];
-    
-    [self setupCellWithItemsImage:model.bg
-                        withTitle:model.timetitle
-                          withSel:model.sel];
+/* 取得web回傳資料 */
+-(void)resultWebData:(ItemsModel *)model{
     //取得gold
     __weak __typeof(self)weakSelf = self;
     _goldRequest = [[GoldRequest alloc] initWithSuccessBlock:^(NSError *error, id result) {
@@ -174,7 +167,7 @@
             if([_setTextView.text integerValue] <= 10){
                 _setTextView.text = @"10";
             }
-
+            
             [_gemRequest setGems: [_setTextView.text integerValue]];
             [_gemRequest send];
             break;
@@ -182,6 +175,21 @@
             NSLog(@"Error");
             break;
     }
+}
+
+/* 更新cell顯示 */
+-(void)setupItemCell:(ItemsModel *)model{
+    
+    _model = model;
+    
+    //時間顯示
+    [self setDate:model.recentDate];
+    
+    [self setupCellWithItemsImage:model.bg
+                        withTitle:model.timetitle
+                          withSel:model.sel];
+    
+    
 }
 
 -(void)setDate:(NSDate *)recentDate{
@@ -236,14 +244,14 @@
     [_bgImageView setImage:[bgImage resizableImageWithCapInsets:UIEdgeInsetsMake( 15, 15, 25, 25) resizingMode:UIImageResizingModeStretch]];
     
     //Label
-    if(_TimeLabel == nil){
-        _TimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 5.0f, 220.0f, 15.0f)];
-        _TimeLabel.font = [UIFont boldSystemFontOfSize:12.0f];
-        [_TimeLabel setTextColor: [UIColor whiteColor]];
-        [self addSubview:_TimeLabel];
+    if(_timeLabel == nil){
+        _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 5.0f, 220.0f, 15.0f)];
+        _timeLabel.font = [UIFont boldSystemFontOfSize:12.0f];
+        [_timeLabel setTextColor: [UIColor whiteColor]];
+        [self addSubview:_timeLabel];
     }
     
-    [_TimeLabel setText: title];
+    [_timeLabel setText: title];
 
     
     

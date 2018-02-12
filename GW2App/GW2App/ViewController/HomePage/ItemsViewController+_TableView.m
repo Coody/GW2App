@@ -17,7 +17,7 @@
 static NSString *const cellIdentifier = @"cellItem";
 
 
-
+float const kItemTableViewCellHight = 110;
 
 @implementation ItemsViewController (_TableView)
 
@@ -68,8 +68,7 @@ static NSString *const cellIdentifier = @"cellItem";
 /* cell 高 */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    return 114.0f;
+    return kItemTableViewCellHight;
 }
 
 /* TableViewDelegate */
@@ -87,7 +86,7 @@ static NSString *const cellIdentifier = @"cellItem";
         [cell showLoading];
     
         model.sel = indexPath.row + 1;
-        [cell setupItemCell:model];
+        [cell resultWebData:model];
     }
 }
 

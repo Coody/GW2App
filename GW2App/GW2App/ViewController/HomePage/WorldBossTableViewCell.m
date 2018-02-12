@@ -50,24 +50,25 @@ NSString *const cellIdentifier = @"cellIdentifier";
     // Configure the view for the selected state
 }
 
-/* 貼上cell資料 */
--(void)setupCell:(WorldBossModel *)model
-                :(NSIndexPath *)index
-                :(BOOL)bSel{
+/* 更新cell資料 */
+-(void)setupCellwithModel:(WorldBossModel *)model
+             withSelIndex:(NSIndexPath *)index
+                withIndex:(BOOL)bSel{
     
     [self setupCellWithTime:model.time
           withBossImagePath:model.bossImageName
               withTitlePath:model.title
             withContextPath:model.context
-                    elIndex:(NSIndexPath *)index
+               withSelIndex:(NSIndexPath *)index
                   withIndex:bSel];
 }
 
+/* 貼上cell資料 */
 -(void)setupCellWithTime:(NSDate *)time
        withBossImagePath:(NSString *)bossImageName
            withTitlePath:(NSString *)title
          withContextPath:(NSString *)context
-                 elIndex:(NSIndexPath *)index
+            withSelIndex:(NSIndexPath *)index
                withIndex:(bool)bSel{
     
     // initial
@@ -76,14 +77,15 @@ NSString *const cellIdentifier = @"cellIdentifier";
         [self addSubview:_bgImageView];
     }
     
+    /* 建立cache*/
     UIImage *bgImage = nil;
     if(index.row){
-        bgImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
+        bgImage = [UIImage imageNamed:[GW2BroH_Tools getPathWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"]];
     }
     else{
-        bgImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
+        bgImage = [UIImage imageNamed:[GW2BroH_Tools getPathWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"]];
     }
-    
+
     /* 指定圖片延伸範圍 */
     [_bgImageView setImage:[bgImage resizableImageWithCapInsets:UIEdgeInsetsMake( 15, 15, 25, 25) resizingMode:UIImageResizingModeStretch]];
     
@@ -94,7 +96,10 @@ NSString *const cellIdentifier = @"cellIdentifier";
                                                                        _bgImageView.frame.size.height *0.6)];
         [_bgImageView addSubview:_bossImageView];
     }
-    UIImage *bossImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:bossImageName];
+    
+    /* 建立cache*/
+    UIImage *bossImage = [UIImage imageNamed:[GW2BroH_Tools getPathWithString:@"ViewControllerWorldBoss" withImageName:bossImageName]];
+    
     [_bossImageView setImage:bossImage];
     
     /* bossTitle */
@@ -117,54 +122,6 @@ NSString *const cellIdentifier = @"cellIdentifier";
     _isSelected = bSel;
 }
 
-/* 貼上cell資料 */
-//-(void)setupCellWithBgImage:(UIImage *)bgImage
-//              withBossImage:(UIImage *)bossImage
-//                  withTitle:(NSString *)title
-//                  withIndex:(bool) bSel{
-//    
-//    /* BackgroundImage */
-//    // initial
-//    if( _bgImageView == nil ){
-//        _bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width*0.05, 0.0f, self.frame.size.width*0.9, kWorldBossTableViewCellHight*0.9)];
-//        [self addSubview:_bgImageView];
-//    }
-//    /* 指定圖片延伸範圍 */
-//    [_bgImageView setImage:[bgImage resizableImageWithCapInsets:UIEdgeInsetsMake( 15, 15, 25, 25) resizingMode:UIImageResizingModeStretch]];
-//    
-//    
-//    
-//    /* BossImage */
-//    if(_bossImageView == nil ){
-//        _bossImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15,
-//                                                                       _bgImageView.frame.size.width*0.36,
-//                                                                       _bgImageView.frame.size.height *0.6)];
-//        [_bgImageView addSubview:_bossImageView];
-//    }
-//    [_bossImageView setImage:bossImage];
-//    
-//    
-//    
-//    /* bossTitle */
-//    if(_titleLabel == nil){
-//        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_bgImageView.center.x, 15.0f, 100.0f, 30.0f)];
-//        _titleLabel.font = [UIFont boldSystemFontOfSize:22.0f];
-//        [_titleLabel setTextColor: [UIColor whiteColor]];
-//        [_bgImageView addSubview:_titleLabel];
-//    }
-//    
-//    [_titleLabel setText:title];
-//    
-//    if( bSel == YES ){
-//        [_bgImageView setFrame:CGRectMake(self.frame.size.width*0.05, 0.0f, self.frame.size.width*0.9, kWorldBossTableViewCellSelectedHight * 0.9)];
-//    }
-//    else{
-//        [_bgImageView setFrame:CGRectMake(self.frame.size.width*0.05, 0.0f, self.frame.size.width*0.9, kWorldBossTableViewCellHight)];
-//    }
-//    
-//    _isSelected = bSel;
-//}
-
 /* 設定cell是否選擇 當cell被點擊時進來*/
 -(void)setIsSelected:(BOOL)isSelected{
     _isSelected = isSelected;
@@ -177,8 +134,9 @@ NSString *const cellIdentifier = @"cellIdentifier";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellSelectedHight)];
+            
             /* 調整cell大小 */
-            [strongSelf setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
+            [strongSelf setFrame:CGRectMake(strongSelf.frame.origin.x, strongSelf.frame.origin.y, strongSelf.frame.size.width, kWorldBossTableViewCellHight)];
             
         }];
     }
@@ -191,8 +149,9 @@ NSString *const cellIdentifier = @"cellIdentifier";
                                                         strongSelf.bgImageView.frame.origin.y,
                                                         strongSelf.bgImageView.frame.size.width,
                                                         kWorldBossTableViewCellHight)];
+            
             /* 調整cell大小 */
-            [strongSelf setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, kWorldBossTableViewCellHight)];
+            [strongSelf setFrame:CGRectMake(strongSelf.frame.origin.x, strongSelf.frame.origin.y, strongSelf.frame.size.width, kWorldBossTableViewCellHight)];
         }];
     }
 }

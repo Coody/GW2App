@@ -31,7 +31,10 @@ typedef enum : NSInteger{
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
+/* 取得web回傳資料 */
+-(void)resultWebData:(ItemsModel *)model;
 
+/* 更新cell顯示 */
 -(void)setupItemCell:(ItemsModel *)model;
 
 /* 貼上cell資料 */
