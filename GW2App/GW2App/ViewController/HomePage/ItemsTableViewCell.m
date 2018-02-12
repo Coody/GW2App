@@ -120,8 +120,6 @@
     
     //時間顯示
     [self setDate:model.recentDate];
-//    [self setGems:model.recentGems];
-//    [self setGemsToGold:model.recentGemsToGold];
     
     [self setupCellWithItemsImage:model.bg
                         withTitle:model.timetitle
@@ -135,8 +133,6 @@
         strongSelf.readLabel.text = [NSString stringWithFormat:@"%@", goldModel.coins_per_gem];
         
         [strongSelf setDate:[NSDate date]];
-//        [strongSelf setGems:()[_setTextView.text integerValue]];
-//        [strongSelf setGemsToGold:[NSDate date]];
         
         /* LoadingEnd */
         [strongSelf removeLoading];

@@ -109,7 +109,7 @@ NSString *const cellIdentifier = @"cellIdentifier";
     
     
     if( bSel == YES ){
-        [_bgImageView setFrame:CGRectMake(self.frame.size.width*0.05, 0.0f, self.frame.size.width*0.9, kWorldBossTableViewCellSelectedHight * 0.9)];
+        [_bgImageView setFrame:CGRectMake(self.frame.size.width*0.05, 0.0f, self.frame.size.width*0.9, kWorldBossTableViewCellSelectedHight)];
     }
     else{
         [_bgImageView setFrame:CGRectMake(self.frame.size.width*0.05, 0.0f, self.frame.size.width*0.9, kWorldBossTableViewCellHight)];

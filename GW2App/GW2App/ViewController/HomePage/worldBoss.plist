@@ -9,7 +9,7 @@
 		<key>image</key>
 		<string>jungleWurm</string>
 		<key>title</key>
-		<string>2蟲王</string>
+		<string>蟲王</string>
 		<key>context</key>
 		<string>2</string>
 	</dict>
@@ -31,7 +31,7 @@
 		<key>image</key>
 		<string>theShatterer</string>
 		<key>title</key>
-		<string>8水晶龍</string>
+		<string>水晶龍</string>
 		<key>context</key>
 		<string>8</string>
 	</dict>
@@ -42,7 +42,7 @@
 		<key>image</key>
 		<string>modniirUlgoth</string>
 		<key>title</key>
-		<string>3人馬王</string>
+		<string>人馬王</string>
 		<key>context</key>
 		<string>3</string>
 	</dict>
@@ -53,7 +53,7 @@
 		<key>image</key>
 		<string>clawOfJormag</string>
 		<key>title</key>
-		<string>4冰龍</string>
+		<string>冰龍</string>
 		<key>context</key>
 		<string>4</string>
 	</dict>
@@ -64,7 +64,7 @@
 		<key>image</key>
 		<string>svanirShaman</string>
 		<key>title</key>
-		<string>5冰薩滿</string>
+		<string>冰薩滿</string>
 		<key>context</key>
 		<string>5</string>
 	</dict>
@@ -75,7 +75,7 @@
 		<key>image</key>
 		<string>golemMarkII</string>
 		<key>title</key>
-		<string>6高倫王</string>
+		<string>高倫王</string>
 		<key>context</key>
 		<string>6</string>
 	</dict>
@@ -86,7 +86,7 @@
 		<key>image</key>
 		<string>evolvedJungleWurm</string>
 		<key>title</key>
-		<string>7三蟲王</string>
+		<string>三蟲王</string>
 		<key>context</key>
 		<string>7</string>
 	</dict>
