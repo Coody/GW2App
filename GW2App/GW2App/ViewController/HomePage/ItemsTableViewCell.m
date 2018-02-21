@@ -210,7 +210,10 @@
         
         _model.recentDate = recentDate;
     }
-    _model.timetitle = [NSString stringWithFormat:@"更新時間: %@" , formatDate ];
+    _model.timetitle = [NSString stringWithFormat:@"更新時間: %@" , formatDate];
+    /* 更新時間 */
+    [_timeLabel setText: _model.timetitle];
+    
 }
 
 -(void)setGems:(NSNumber *)recentGems{
