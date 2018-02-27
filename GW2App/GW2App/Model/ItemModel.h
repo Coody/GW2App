@@ -13,7 +13,9 @@
 @interface ItemModel : NSObject <ModelProtocol>
 
 @property (nonatomic , strong) NSDate *gemsDate;
+@property (nonatomic , strong) NSDate *goldDate;
 @property (nonatomic , strong) NSNumber *gems;
+@property (nonatomic , strong) NSNumber *gold;
 @property (nonatomic , strong) NSNumber *gemsToGold;
-
+@property (nonatomic , strong) NSNumber *goldToGems;
 @end

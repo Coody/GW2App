@@ -10,6 +10,9 @@
 #define ModelKey_h
 
 #define D_ITEMS_KEY @"D_ITEMS_KEY"
+#define D_TIME_GOLD_KEY @"D_TIME_GOLD_KEY"
 #define D_ITEMS_GEMS_KEY @"D_ITEMS_GEMS_KEY"
+#define D_ITEMS_GOLD_KEY @"D_ITEMS_GOLD_KEY"
 #define D_ITEMS_GEMS_TO_GOLD_KEY @"D_ITEMS_GEMS_TO_GOLD_KEY"
+#define D_ITEMS_GOLD_TO_GEMS_KEY @"D_ITEMS_GOLD_TO_GEMS_KEY"
 #endif /* ModelKey_h */

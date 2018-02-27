@@ -24,8 +24,11 @@
 
 @implementation ItemsModel
 @synthesize recentDate = _recentDate;
+@synthesize recentGoldDate = _recentGoldDate;
 @synthesize recentGems = _recentGems;
+@synthesize recentGold = _recentGold;
 @synthesize recentGemsToGold = _recentGemsToGold;
+@synthesize recentGoldToGems = _recentGoldToGems;
 
 
 -(void)setRecentDate:(NSDate *)recentDate{
@@ -42,6 +45,21 @@
     return _recentDate;
 }
 
+-(void)setRecentGoldDate:(NSDate *)recentGoldDate{
+    if( recentGoldDate != nil ){
+        _recentGoldDate = recentGoldDate;
+        ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_TIME_GOLD_KEY];
+        itemModel.goldDate = _recentGoldDate;
+    }
+}
+
+-(NSDate *)recentGoldDate{
+    ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_TIME_GOLD_KEY];
+    _recentGoldDate = itemModel.goldDate;
+    return _recentGoldDate;
+}
+
+
 -(void)setRecentGems:(NSNumber *)recentGems{
     if( recentGems != nil ){
         _recentGems = recentGems;
@@ -56,11 +74,33 @@
     return _recentGems;
 }
 
--(void)recentGemsToGold:(NSNumber *)recentGemsToGold{
+-(void)setRecentGold:(NSNumber *)recentGold{
+    if( recentGold != nil ){
+        _recentGold = recentGold;
+        ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_GOLD_KEY];
+        itemModel.gold = _recentGold;
+    }
+}
+
+-(NSNumber *)recentGold{
+    ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_GOLD_KEY];
+    _recentGold = itemModel.gold;
+    return _recentGold;
+}
+
+-(void)setRecentGemsToGold:(NSNumber *)recentGemsToGold{
     if( recentGemsToGold != nil ){
         _recentGemsToGold = recentGemsToGold;
         ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_GEMS_TO_GOLD_KEY];
         itemModel.gemsToGold = _recentGemsToGold;
+    }
+}
+
+-(void)setRecentGoldToGems:(NSNumber *)recentGoldToGems{
+    if( recentGoldToGems != nil ){
+        _recentGoldToGems = recentGoldToGems;
+        ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_GOLD_TO_GEMS_KEY];
+        itemModel.goldToGems = _recentGoldToGems;
     }
 }
 
@@ -69,10 +109,18 @@
     _recentGemsToGold = itemModel.gemsToGold;
     return _recentGemsToGold;
 }
+
+-(NSNumber *)recentGoldToGems{
+    ItemModel *itemModel = (ItemModel *)[[ModelManager sharedInstance] getModelWithKey:D_ITEMS_GOLD_TO_GEMS_KEY];
+    _recentGoldToGems = itemModel.goldToGems;
+    return _recentGoldToGems;
+}
+
 @end
 
 
 @interface ItemsTableViewCell()
+
 @property (nonatomic , assign) EnumItemsCange cellType;
 @property (nonatomic , strong) ItemsModel *model;
 @property (nonatomic , strong) UIImageView *bgImageView;
@@ -100,6 +148,7 @@
         [self setBackgroundColor:[UIColor clearColor]];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 110)];
+        
     }
     return self;
 }
@@ -125,8 +174,10 @@
         GoldRequestModel *goldModel = (GoldRequestModel *)result;
         strongSelf.readLabel.text = [NSString stringWithFormat:@"%@", goldModel.coins_per_gem];
         
-        [strongSelf setDate:[NSDate date]];
-        
+        [strongSelf setGoldDate:[NSDate date]];
+        [strongSelf setGold:[NSNumber numberWithInteger:[_setTextView.text integerValue]]];
+        [strongSelf setGoldToGems:goldModel.coins_per_gem];
+
         /* LoadingEnd */
         [strongSelf removeLoading];
         
@@ -142,9 +193,11 @@
         
         
         GemsRequestModel *gemModel = (GemsRequestModel *)result;
-        _readLabel.text = [NSString stringWithFormat:@"%@", gemModel.coins_per_gem];
+        strongSelf.readLabel.text = [NSString stringWithFormat:@"%@", gemModel.coins_per_gem];
         
-        [strongSelf setDate:[NSDate date]];
+        [strongSelf setGemsDate:[NSDate date]];
+        [strongSelf setGems:[NSNumber numberWithInteger:[_setTextView.text integerValue]]];
+        [strongSelf setGemsToGold:gemModel.coins_per_gem];
         
         /* LoadingEnd */
         [strongSelf removeLoading];
@@ -179,20 +232,51 @@
 
 /* 更新cell顯示 */
 -(void)setupItemCell:(ItemsModel *)model{
-    
     _model = model;
-    
+//    static int i = 0;
     //時間顯示
-    [self setDate:model.recentDate];
+    switch(model.sel){
+        case EnumItemIndex_GoldToGems:
+            [self setGoldDate:model.recentGoldDate];
+            [self setGold:model.recentGold];
+            [self setGoldToGems:model.recentGoldToGems];
+            model.viewChose = 1;
+            break;
+        case EnumItemIndex_GemsToGold:
+            [self setGemsDate:model.recentDate];
+            [self setGems:model.recentGems];
+            [self setGemsToGold:model.recentGemsToGold];
+            model.viewChose = 2;
+            break;
+        default:
+            if(model.viewChose < 2){
+                model.viewChose++;
+            }
+            
+            if(model.viewChose == 1){
+                [self setGoldDate:model.recentGoldDate];
+                [self setGold:model.recentGold];
+                [self setGoldToGems:model.recentGoldToGems];
+                
+            }
+            else if(model.viewChose == 2){
+                [self setGemsDate:model.recentDate];
+                [self setGems:model.recentGems];
+                [self setGemsToGold:model.recentGemsToGold];
+            }
+            
+            NSLog(@"Error");
+            break;
+    }
     
     [self setupCellWithItemsImage:model.bg
                         withTitle:model.timetitle
-                          withSel:model.sel];
+                          withSel:model.viewChose];
     
     
 }
 
--(void)setDate:(NSDate *)recentDate{
+-(void)setGemsDate:(NSDate *)recentDate{
     NSString *formatDate;
     if( recentDate == nil ){
         formatDate = @"?";
@@ -216,13 +300,53 @@
     
 }
 
+-(void)setGoldDate:(NSDate *)recentGoldDate{
+    NSString *formatDate;
+    if( recentGoldDate == nil ){
+        formatDate = @"?";
+    }
+    else{
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        
+        // 正規化的格式設定
+        [formatter setDateFormat:@"YYYY/MM/dd HH:mm:ss"];
+        
+        // 正規化取得的系統時間並顯示
+        formatDate = [formatter stringFromDate:recentGoldDate];
+        
+        NSLog(@"更新時間: %@", formatDate);
+        
+        _model.recentGoldDate = recentGoldDate;
+    }
+    _model.timetitle = [NSString stringWithFormat:@"更新時間: %@" , formatDate];
+    /* 更新時間 */
+    [_timeLabel setText: _model.timetitle];
+    
+}
+
 -(void)setGems:(NSNumber *)recentGems{
     
     _setTextView.text = @"?";
-    if(recentGems != nil)
-    {
+    
+    if(recentGems != nil){
         _model.recentGems = recentGems;
+        _model.sendtitle = [NSString stringWithFormat:@"%@" , recentGems];
+        _setTextView.text = _model.sendtitle;
     }
+    
+}
+
+
+-(void)setGold:(NSNumber *)recentGold{
+    
+    _setTextView.text = @"?";
+    
+    if(recentGold != nil){
+        _model.recentGold = recentGold;
+        _model.sendtitle = [NSString stringWithFormat:@"%@" , recentGold];
+        _setTextView.text = _model.sendtitle;
+    }
+    
 }
 
 -(void)setGemsToGold:(NSNumber *)recentGemsToGold{
@@ -231,6 +355,21 @@
     if(recentGemsToGold != nil)
     {
         _model.recentGemsToGold = recentGemsToGold;
+        _model.readtitle = [NSString stringWithFormat:@"%@" , recentGemsToGold];
+        _readLabel.text = _model.readtitle;
+        
+    }
+}
+
+-(void)setGoldToGems:(NSNumber *)recentGoldToGems{
+    
+    _readLabel.text = @"?";
+    if(recentGoldToGems != nil)
+    {
+        _model.recentGoldToGems = recentGoldToGems;
+        _model.readtitle = [NSString stringWithFormat:@"%@" , recentGoldToGems];
+        _readLabel.text = _model.readtitle;
+        
     }
 }
 
@@ -276,6 +415,7 @@
         [self addSubview:_setTextView];
         [_setTextView setText:@"?"];
     }
+    [_setTextView setText:_model.sendtitle];
     
     if(_readLabel == nil){
         _readLabel.text = @"9";
@@ -283,7 +423,7 @@
         _readLabel.font = [UIFont boldSystemFontOfSize:24.0f];
         [self addSubview:_readLabel];
     }
-    
+    [_readLabel setText:_model.readtitle];
     
     /* 選擇更新資料 */
     switch(sel){

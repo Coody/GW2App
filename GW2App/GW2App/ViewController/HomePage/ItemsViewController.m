@@ -56,6 +56,8 @@ typedef enum : int{
         model.bg = [self getCellImageWithIndex:i];
         model.timetitle = [self getCellTimeLabelWithIndex:i];
         model.sel = EnumItemIndex_None;
+        model.viewChose = i;
+        
         [array addObject:model];
     }
     

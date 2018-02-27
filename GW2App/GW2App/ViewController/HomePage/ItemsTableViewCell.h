@@ -15,14 +15,22 @@ typedef enum : NSInteger{
 }EnumItemsCange;
 
 @interface ItemsModel : NSObject
-@property (nonatomic , strong) UIImage  *bg;
+@property (nonatomic , strong) UIImage *bg;
 @property (nonatomic , strong) NSDate *recentDate;
 @property (nonatomic , strong) NSNumber *recentGems;
 @property (nonatomic , strong) NSNumber *recentGemsToGold;
 
+@property (nonatomic , strong) NSDate *recentGoldDate;
+@property (nonatomic , strong) NSNumber *recentGold;
+@property (nonatomic , strong) NSNumber *recentGoldToGems;
+
 @property (nonatomic , strong) NSString *timetitle;
+@property (nonatomic , strong) NSString *sendtitle;
+@property (nonatomic , strong) NSString *readtitle;
 @property (nonatomic , assign) NSUInteger sel;
+@property (nonatomic , assign) NSInteger viewChose;
 @property (nonatomic , assign) EnumItemsCange cellType;
+
 @end
 
 @interface ItemsTableViewCell : UITableViewCell
@@ -52,4 +60,21 @@ typedef enum : NSInteger{
 /* 移除Loading */
 - (void)removeLoading;
 
+/* 讀取gems時間 */
+-(void)setGemsDate:(NSDate *)recentDate;
+
+/* 讀取gold時間 */
+-(void)setGoldDate:(NSDate *)recentGoldDate;
+
+/* 讀取gemsToGold */
+-(void)setGemsToGold:(NSNumber *)recentGemsToGold;
+
+/* 讀取GoldTogems */
+-(void)setGoldToGems:(NSNumber *)recentGoldToGems;
+
+/* 讀取gems */
+-(void)setGems:(NSNumber *)recentGems;
+
+/* 讀取gold */
+-(void)setGold:(NSNumber *)recentGold;
 @end

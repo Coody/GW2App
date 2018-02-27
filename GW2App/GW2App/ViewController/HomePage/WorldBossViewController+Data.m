@@ -18,15 +18,13 @@ static NSString *const kWorldBossPlistFileType = @"plist";
 @implementation WorldBossViewController (Data)
 
 -(NSMutableArray *)getWorldBossPlist{
+    /* 資料字串化 */
     NSString *worldBossDataString = [[NSBundle mainBundle] pathForResource:kWorldBossPlistFileName ofType:kWorldBossPlistFileType];
     
-    
+    /* 資料字串存成字典 */
     NSDictionary *dataDic = [[NSDictionary alloc] initWithContentsOfFile:worldBossDataString];
     NSMutableArray *modelArray = [[NSMutableArray alloc] initWithCapacity:[dataDic count]];
     
-    /* 通過對可變數組的字典的某个key值建立排序依據-時間 */
-    NSSortDescriptor *distanceDescriptor = [[NSSortDescriptor alloc] initWithKey:@"time" ascending:YES];
-    NSArray *descriptors = [NSArray arrayWithObjects:distanceDescriptor,nil];
     
     /* 讀取plist資料 */
     for ( NSDictionary *key in dataDic.allKeys ) {
@@ -40,6 +38,11 @@ static NSString *const kWorldBossPlistFileType = @"plist";
         
         [modelArray addObject:model];
     }
+    
+    /* 通過對可變數組的字典的某个key值建立排序依據-時間 */
+    NSSortDescriptor *distanceDescriptor = [[NSSortDescriptor alloc] initWithKey:@"time" ascending:YES];
+    NSArray *descriptors = [NSArray arrayWithObjects:distanceDescriptor,nil];
+    
     /* 依時間排序 */
     [modelArray sortUsingDescriptors:descriptors];
     

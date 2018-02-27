@@ -43,7 +43,6 @@
        
     }
     WorldBossModel *model = [self.contentArray objectAtIndex:indexPath.row];
-//    [cell setupCell:[self.contentArray objectAtIndex:indexPath.row]:indexPath:model.isSelected];
     
     [cell setupCellwithModel:[self.contentArray objectAtIndex:indexPath.row]
                 withSelIndex:indexPath

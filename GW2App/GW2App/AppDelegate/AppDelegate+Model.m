@@ -20,6 +20,21 @@
 -(void)initialModel{
     [[ModelManager sharedInstance] setModelWithKey:D_ITEMS_KEY
                                          withModel:[[ItemModel alloc] init]];
+    
+    [[ModelManager sharedInstance] setModelWithKey:D_TIME_GOLD_KEY
+                                         withModel:[[ItemModel alloc] init]];
+    
+    [[ModelManager sharedInstance] setModelWithKey:D_ITEMS_GEMS_KEY
+                                         withModel:[[ItemModel alloc] init]];
+    
+    [[ModelManager sharedInstance] setModelWithKey:D_ITEMS_GOLD_KEY
+                                         withModel:[[ItemModel alloc] init]];
+    
+    [[ModelManager sharedInstance] setModelWithKey:D_ITEMS_GEMS_TO_GOLD_KEY
+                                         withModel:[[ItemModel alloc] init]];
+    
+    [[ModelManager sharedInstance] setModelWithKey:D_ITEMS_GOLD_TO_GEMS_KEY
+                                         withModel:[[ItemModel alloc] init]];
 }
 
 @end

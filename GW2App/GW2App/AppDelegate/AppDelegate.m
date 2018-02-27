@@ -33,17 +33,18 @@
     
     [self setWebRequestUrl];
     
-    [self initialModel];
+//    [self initialModel];
     return YES;
 }
 
 -(void) initWithViewControl{
-    
+    [self initialModel];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //tabBar
     ViewControllerTabBar *tabBarContrller = [[ViewControllerTabBar alloc] init];
     self.window.rootViewController = tabBarContrller;
     [self.window makeKeyAndVisible];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
