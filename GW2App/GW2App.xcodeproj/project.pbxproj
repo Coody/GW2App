@@ -107,6 +107,7 @@
 		5AEA64FD20085EC300758098 /* WebsiteBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteBase.h; sourceTree = "<group>"; };
 		5AEA64FE20085EC300758098 /* WebsiteBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteBase.m; sourceTree = "<group>"; };
 		5AEA64FF20085EC300758098 /* WebsiteBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteBaseDefine.h; sourceTree = "<group>"; };
+		7B4CF1D6BE363A7C2977A695 /* Pods-GW2App.debug copy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.debug copy.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.debug copy.xcconfig"; sourceTree = "<group>"; };
 		80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GW2App/Pods-GW2App.debug.xcconfig"; sourceTree = "<group>"; };
 		D5D4443D083CB25AC04211F0 /* libPods-GW2App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GW2App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -234,7 +235,6 @@
 				5AEA64F620085E1B00758098 /* AppDelegate */,
 				5AEA64EB20085DD600758098 /* ViewController */,
 				5AEA64F320085DD700758098 /* Submodule */,
-				5AEA64EE20085DD600758098 /* ThirdParty */,
 				5AEA64EF20085DD600758098 /* Tools */,
 				139197BA200742FF00D2638C /* Assets.xcassets */,
 				139197BF200742FF00D2638C /* Info.plist */,
@@ -297,13 +297,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		5AEA64EE20085DD600758098 /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdParty;
-			sourceTree = "<group>";
-		};
 		5AEA64EF20085DD600758098 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +352,7 @@
 			children = (
 				80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */,
 				54D0BD45927CDE9F5870DBEE /* Pods-GW2App.release.xcconfig */,
+				7B4CF1D6BE363A7C2977A695 /* Pods-GW2App.debug copy.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -433,8 +427,8 @@
 				TargetAttributes = {
 					139197AA200742FF00D2638C = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = M6UMF9TFFD;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = E3HA4ULF6C;
+						ProvisioningStyle = Manual;
 					};
 					139197C3200742FF00D2638C = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -525,7 +519,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E19AEA6099FFCCD0EB84096 /* [CP] Copy Pods Resources */ = {
@@ -704,12 +698,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = M6UMF9TFFD;
+				DEVELOPMENT_TEAM = E3HA4ULF6C;
 				INFOPLIST_FILE = GW2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2App;
+				PRODUCT_BUNDLE_IDENTIFIER = com.normi.GW2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d03afdb3-672c-4fd1-b59d-50bcc66eee7d";
+				PROVISIONING_PROFILE_SPECIFIER = Normi_Test_App;
 			};
 			name = Debug;
 		};
@@ -721,12 +716,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = M6UMF9TFFD;
+				DEVELOPMENT_TEAM = E3HA4ULF6C;
 				INFOPLIST_FILE = GW2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2App;
+				PRODUCT_BUNDLE_IDENTIFIER = com.normi.GW2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d03afdb3-672c-4fd1-b59d-50bcc66eee7d";
+				PROVISIONING_PROFILE_SPECIFIER = Normi_Test_App;
 			};
 			name = Release;
 		};
@@ -826,18 +822,19 @@
 		};
 		13EDBAD1202410E300A09745 /* Debug copy */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80965554C6C5E0780277F896 /* Pods-GW2App.debug.xcconfig */;
+			baseConfigurationReference = 7B4CF1D6BE363A7C2977A695 /* Pods-GW2App.debug copy.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = M6UMF9TFFD;
+				DEVELOPMENT_TEAM = E3HA4ULF6C;
 				INFOPLIST_FILE = GW2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.xsg.GW2App;
+				PRODUCT_BUNDLE_IDENTIFIER = com.normi.GW2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d03afdb3-672c-4fd1-b59d-50bcc66eee7d";
+				PROVISIONING_PROFILE_SPECIFIER = Normi_Test_App;
 			};
 			name = "Debug copy";
 		};
