@@ -701,10 +701,10 @@
 				DEVELOPMENT_TEAM = E3HA4ULF6C;
 				INFOPLIST_FILE = GW2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.normi.GW2App;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.normi.GW2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d03afdb3-672c-4fd1-b59d-50bcc66eee7d";
-				PROVISIONING_PROFILE_SPECIFIER = Normi_Test_App;
+				PROVISIONING_PROFILE = "095610f4-dc46-4cd5-8022-ee93a1e80430";
+				PROVISIONING_PROFILE_SPECIFIER = GW2App_Development;
 			};
 			name = Debug;
 		};
@@ -714,15 +714,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E3HA4ULF6C;
 				INFOPLIST_FILE = GW2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.normi.GW2App;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.normi.GW2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d03afdb3-672c-4fd1-b59d-50bcc66eee7d";
-				PROVISIONING_PROFILE_SPECIFIER = Normi_Test_App;
+				PROVISIONING_PROFILE = "fe1baf6e-54f7-4754-9dd4-cd2b021d245b";
+				PROVISIONING_PROFILE_SPECIFIER = GW2App_Distribution;
 			};
 			name = Release;
 		};
@@ -831,10 +831,10 @@
 				DEVELOPMENT_TEAM = E3HA4ULF6C;
 				INFOPLIST_FILE = GW2App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.normi.GW2App;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.normi.GW2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d03afdb3-672c-4fd1-b59d-50bcc66eee7d";
-				PROVISIONING_PROFILE_SPECIFIER = Normi_Test_App;
+				PROVISIONING_PROFILE = "095610f4-dc46-4cd5-8022-ee93a1e80430";
+				PROVISIONING_PROFILE_SPECIFIER = GW2App_Development;
 			};
 			name = "Debug copy";
 		};
